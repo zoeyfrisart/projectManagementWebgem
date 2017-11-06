@@ -3,6 +3,7 @@ import style from './style';
 
 import BoardGroup from '../../components/groups';
 import NewGroup from '../../components/newGroup';
+import StatusComp from '../../components/statusComp';
 import base from '../../base';
 
 export default class Board extends Component {
@@ -53,7 +54,7 @@ export default class Board extends Component {
   render({ teamname }, { boards, members, user }) {
     return (
       <div class={style.board}>
-        <h2>{teamname}</h2>
+        <StatusComp />
         <div class={style.boardGroupWrapper}>
           {
             Object
