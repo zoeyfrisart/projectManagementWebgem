@@ -1,0 +1,15 @@
+.board{
+  width: calc(100% - 250px);
+  height: auto;
+  max-height: calc(100vh - 50px);
+}
+
+.board::-webkit-scrollbar{
+  display: none;
+}
+
+.boardGroupWrapper{
+  width: 100%;
+  display: block;
+  height: auto;
+}

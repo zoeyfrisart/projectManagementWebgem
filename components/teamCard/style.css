@@ -1,0 +1,38 @@
+.cardWrap{
+  display: inline-block;
+  width: 20%;
+  min-width: 300px;
+  margin: 10px 5px;
+}
+
+.cardWrap h1{
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.cardBackcolor{
+  background: #333;
+  color: white;
+  margin-left: -16px;
+  margin-top: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.cardWrap button{
+  width: 100%;
+}
+
+.linkCard{
+  width: 100%;
+  width: calc(50% - 8px);
+  margin-right: 8px;
+}
+
+/* fix the button margin */

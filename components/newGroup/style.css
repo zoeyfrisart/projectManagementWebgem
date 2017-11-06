@@ -1,0 +1,94 @@
+.newGroup{
+  display: block;
+  width: 100%;
+  padding: 0 17px;
+}
+
+.newGroupForm{
+  width: 100%;
+  display: flex;
+}
+
+.newGroupForm input{
+  width: 90%;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-left: 7.5px solid #eee;
+  border-top: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0;
+  color: #333;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  height: 35px;
+}
+
+.newGroupForm input:focus{
+  border-color: #f44336;
+  color: #333;
+}
+
+.newGroupH3{
+  margin: 0;
+  padding: 0;
+}
+
+.color {
+  height: 36px;
+  border-radius: 2px;
+  background: deeppink;
+  width: 100%;
+  display: block;
+}
+
+.swatch {
+  padding: 0px;
+  background: #fff;
+  border-radius: 2px;
+  /* box-shadow: 0 0 0 1px rgba(0,0,0,.1); */
+  cursor: pointer;
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 35px;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+}
+
+.popover {
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  left: 0;
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.wrapColor{
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  margin-left: 2px;
+}
+
+.tdAddItem{
+  padding: 0;
+}
+
+h3{
+  font-weight: 400;
+}

@@ -1,0 +1,111 @@
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+input.input {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: none;
+  color: white;
+  /* padding: 0; */
+  /* border: 1px solid #aaa; */
+  /* border-radius: 4px; */
+  /* width: 0px; */
+  /* height: 0px; */
+}
+
+input.input::placeholder{
+  color: white;
+}
+
+input.inputFocused {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+input.inputOpen {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.suggestionsContainer {
+  display: none;
+}
+
+.suggestionsContainerOpen {
+  display: block;
+  position: absolute;
+  top: 36px;
+  width: 280px;
+  background-color: #fafafa;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  z-index: 2;
+}
+
+.suggestionsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: block;
+}
+
+.suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+  display: block
+}
+
+.suggestionHighlighted {
+  background-color: #ddd;
+}
+
+.sectionContainer {
+  border-top: 1px dashed #ccc;
+  display: block;
+}
+
+.sectionContainerFirst {
+  border-top: 0;
+  display: block;
+}
+
+.sectionTitle {
+  padding: 10px 0 0 10px;
+  font-size: 12px;
+  color: #777;
+  display: block
+}
+
+.suggestionName{
+  font-size: 16px;
+  color: #596496;
+  flex: 1 0;
+}
+
+.suggestionFunctie{
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+.suggestionWrapper{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}

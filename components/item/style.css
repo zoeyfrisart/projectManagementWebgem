@@ -1,0 +1,106 @@
+tbody{
+  display: table-row-group
+}
+
+tbody tr.tableRow{
+  /* width: 100%; */
+  display: table-row;
+}
+
+tbody tr.tableRow td{
+  margin: 1px;
+  border-bottom: 1px solid #e6e6e6;
+  white-space: nowrap;
+  padding: 0;
+  width: 10%;
+  display: table-cell;
+}
+
+.innerWrap{
+  background: #f0f0f0;
+  padding: 0;
+  height: 35px;
+  color: #596496;
+  display: block;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  width: auto;
+  font-size: 13px;
+}
+
+.innerWrap input{
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 5px 10px;
+  display: flex;
+  color: #596496;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.innerWrap input.inputDesc{
+  /* width: 20vw; */
+  min-width: 250px;
+  text-align: left;
+}
+
+.perwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.personimg{
+  height: 70%;
+}
+
+.suggestionContent {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+button.deleteItem{
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 3px;
+  margin: 0;
+}
+
+button.deleteItem img{
+  height: 25px;
+}
+
+input.deadline{
+  padding: 2px;
+}
+
+/* input.deadline::before{
+  content: '';
+} */
+input.deadline::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+input.deadline::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+input.deadline::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent;
+}
+
+/* ::-webkit-datetime-edit-month-field { color: blue; }
+::-webkit-datetime-edit-day-field { color: green; }
+::-webkit-datetime-edit-year-field { color: purple; } */

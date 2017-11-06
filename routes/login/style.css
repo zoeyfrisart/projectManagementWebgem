@@ -1,0 +1,220 @@
+/* Login page */
+.login{
+  display: flex;
+  justify-content: center;
+  width: 62.11%;
+  box-sizing: border-box;
+  min-width: 360px;
+  flex-direction: row;
+  align-items: center;
+  height: 650px;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  background: linear-gradient(228.62deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
+  overflow: hidden;
+}
+
+/* login Wrapper */
+.loginWrap{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+  width: 100%;
+  background-blend-mode: overlay;
+  background: linear-gradient(225deg, rgba(250, 217, 97, 0.6) 0%, rgba(255, 90, 206, 0.6) 100%);
+}
+
+.loginWrap *{
+  box-sizing: border-box
+}
+
+.loginWith{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.loginWith button{
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.signup{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://20578.tk/board/background-pics/background-login@2x.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.loginhalf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  background: white;
+  height: 100%;
+}
+
+.lineSub {
+  height: 3px;
+  width: 80%;
+  opacity: 0.8;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
+  background: linear-gradient(225deg, #FAD961 0%, #FF5ACD 100%);
+  display: block;
+  margin: 1.76% 0;
+}
+
+.lineMain {
+  height: 3px;
+  width: 100%;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
+  background: linear-gradient(225deg, #FAD961 0%, #FF5ACD 100%);
+  display: block;
+  margin: 15px 0;
+}
+
+.logoWrap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+  z-index: 3;
+}
+
+.logoImg{
+  height: 35px;
+}
+
+.backgroundGradient{
+  background: linear-gradient(228.62deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.52;
+}
+
+.loginHalf h2{
+  height: 42px;
+  width: 104px;
+  color: #4A4A4A;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+  text-align: center;
+}
+
+.loginHalfH2{
+  margin: 0;
+  color: #393939;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button.loginBut{
+  background: linear-gradient(75deg ,#7028E4 -30%, #4776E6 120%);
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  margin: 5px 0;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.lineLogin{
+  width: 80%;
+  background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
+  height: 4px;
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+/* Form login */
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+.loginForm input{
+  width: 90%;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #888888;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 28px;
+  display: inline-block;
+  border-bottom: 2px solid rgba(20%,20%,20%,0.2);
+  transition: all .3s ease;
+}
+
+.loginForm input:focus{
+  outline: none;
+  border-color: rgba(20%,20%,20%,0.5);
+}
+
+.loginForm input::placeholder{
+  opacity: 0.2;
+  transition: all .3s ease;
+}
+
+.loginForm input:focus::placeholder{
+  opacity: 0.8;
+}
+
+.loginForm label{
+  display: inline-block;
+  width: 10%;
+}
+
+.loginForm .inputWrap{
+  margin: 5px 0;
+  width: 100%;
+}
+
+.loginSubmit {
+  width: 100%;
+  color: #86149D;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 33px;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: right;
+  padding: 10px;
+  padding-right: 20px;
+}

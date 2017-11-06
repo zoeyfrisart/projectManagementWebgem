@@ -1,0 +1,27 @@
+nav a.boooi{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  vertical-align: top;
+}
+
+nav a.boooi div.mdc-menu-anchor div{
+  top: 50px !important;
+}
+
+nav a.booi div.booi2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.boooi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.boooooi{
+  top: 50px !important;
+}
