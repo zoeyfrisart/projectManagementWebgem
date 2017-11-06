@@ -86,9 +86,12 @@ export default class BoardGroup extends Component {
     this.props.updateGroup(this.props.index, updatedGroup);
   };
 
-  handleDeleteGroupItems(){
-    base.remove(`/items/${this.props.index}`);
-    this.props.removeGroup(this.props.index);
+  handleDeleteGroupItems() {
+    let r = confirm(`You are about to delete ${this.props.details.name}. \nThis can't be undone! \nAre you sure you want to delete the board ${this.props.details.name}`);
+    if (r === true) {
+      base.remove(`/items/${this.props.index}`);
+      this.props.removeGroup(this.props.index);
+    }
   }
 
   render() {
