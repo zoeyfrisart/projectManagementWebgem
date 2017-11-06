@@ -130,18 +130,15 @@ export default class Item extends Component {
         </td>
         <td style={`min-width: 130px;`}>
           <div class={style.innerWrap}>
-            <div class={style.subRow} >
-              <SelectStatus
-                statusI={`status`}
-                formId={`${details.in1d + 4}`}
-                index={this.props.index}
-                details={this.props.details}
-                updateItem={this.props.updateItem}
-                boardName={this.props.boardName}
-                groupI={this.props.groupI}
-              />
-            </div>
-            <div class={style.subRow} />
+            <SelectStatus
+              statusI={`status`}
+              formId={`${details.in1d + 4}`}
+              index={this.props.index}
+              details={this.props.details}
+              updateItem={this.props.updateItem}
+              boardName={this.props.boardName}
+              groupI={this.props.groupI}
+            />
           </div>
         </td>
         <td style={`min-width: 100px;`}>
