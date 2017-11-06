@@ -9,7 +9,7 @@ tbody tr.tableRow{
 
 tbody tr.tableRow td{
   margin: 1px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e9e9e9;
   white-space: nowrap;
   padding: 0;
   width: 10%;
@@ -17,9 +17,9 @@ tbody tr.tableRow td{
 }
 
 .innerWrap{
-  background: #f0f0f0;
+  background: #f8f8f8;
   padding: 0;
-  height: 35px;
+  height: 50px;
   color: #596496;
   display: block;
   text-decoration: none;
@@ -30,6 +30,10 @@ tbody tr.tableRow td{
   outline: none;
   width: auto;
   font-size: 13px;
+}
+
+tbody tr.tableRow:nth-child(odd) td .innerWrap{
+  background: #f2f2f2;
 }
 
 .innerWrap input{
@@ -104,3 +108,44 @@ input.deadline::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
 /* ::-webkit-datetime-edit-month-field { color: blue; }
 ::-webkit-datetime-edit-day-field { color: green; }
 ::-webkit-datetime-edit-year-field { color: purple; } */
+
+.subRow{
+  height: 35px;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.subRow:last-of-type{
+  height: 15px;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subRow:last-of-type p{
+  padding: 0 3px;
+  padding-bottom: 3px;
+  margin: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 0.9em;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.inPast{
+  color: red;
+}
+
+.inPastDone{
+  color: green;
+}
