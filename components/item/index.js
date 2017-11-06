@@ -105,9 +105,9 @@ export default class Item extends Component {
               class={style.deadline}
               name="finishGoal"
               onChange={(e) => this.handleChange(e, this.props.index)}
-              type="date"
+              type="text"
               value={details.finishGoal}
-              placeholder="dd/mm/yyyy"
+              placeholder="dd/mm/yy"
             />
           </div>
         </td>
@@ -120,7 +120,7 @@ export default class Item extends Component {
               onChange={(e) => this.handleChange(e, this.props.index)}
               type="date"
               value={details.deadline}
-              placeholder="dd/mm/yyyy"
+              placeholder="dd/mm/yy"
             />
           </div>
         </td>
