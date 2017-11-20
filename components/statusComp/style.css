@@ -10,6 +10,17 @@
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   color: white;
   padding: 2em 4em;
+  position: relative;
+}
+.edit{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0px;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 /* Layout */
@@ -80,34 +91,6 @@
 }
 
 
-/* Radial progress Change Color */
-.newCircle{
-  box-shadow: inset 3px 0px 0px #fafafa, inset -3px 0px 0px #fafafa, inset 0px 3px 0px #fafafa, inset 0px -3px 0px #fafafa;
-  background: none;
-}
-
-.percentage{
-  color: #ffffff !important;
-  opacity: 1;
-}
-
-.newCircle:after{
-  background: none;
-}
-
-.newSlice{
-  background: none;
-}
-
-.newCircle .newSlice .newBar{
-  border: 0.08em solid #9a67ea;
-  background: none;
-}
-
-.newFill{
-  background: none;
-}
-
 /* H3 */
 .h3__column{
   text-align: center;
@@ -126,4 +109,61 @@
   display: block;
   text-align: center;
   font-size: 2em;
+}
+
+.opdrachtgever{
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2.5px 0;
+  color: rgb(255,255,255);
+  font-size: 18.7px;
+  font-weight: 400;
+  border: 1px dashed rgba(255,255,255,0.2);
+}
+
+.opdrachtgever:hover,
+.opdrachtgever:focus{
+  border: 1px dashed rgba(255,255,255,0.5);
+}
+
+.opdrachtgever::placeholder{
+  color: rgb(255,255,255);
+}
+
+.editButton{
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: all .2s ease;
+}
+
+.editButton:hover{
+  color: rgba(255,255,255,0.5);
+}
+
+.deadlineEdit{
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  color: rgb(255,255,255);
+  font-size: 32px;
+  font-weight: 400;
+  border: 1px dashed rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+.deadlineEdit:hover,
+.deadlineEdit:focus{
+  border: 1px dashed rgba(255,255,255,0.5);
+}
+
+.deadlineEdit::placeholder{
+  color: rgb(255,255,255);
+  font-size: 20px;
 }

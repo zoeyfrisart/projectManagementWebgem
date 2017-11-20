@@ -8,7 +8,7 @@ export default class TeamInfo extends Component {
     return (
       <div class={style.team}>
         <div class={style.content}>
-          <div class={style.headWrap}><h2>{this.props.teamname}</h2></div>
+          <div class={style.headWrap}><h2>{this.props.teamname} boards</h2></div>
           {
             Object
               .keys(this.props.boards)
