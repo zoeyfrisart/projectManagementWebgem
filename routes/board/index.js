@@ -54,7 +54,10 @@ export default class Board extends Component {
   render({ teamname }, { boards, members, user }) {
     return (
       <div class={style.board}>
-        <StatusComp />
+        <StatusComp
+          boardName={this.props.boardName}
+          teamname={this.props.teamname}
+        />
         <div class={style.boardGroupWrapper}>
           {
             Object

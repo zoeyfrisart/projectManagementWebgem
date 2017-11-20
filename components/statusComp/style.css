@@ -1,79 +1,129 @@
-/* https://material.io/color/#!/?view.left=0&view.right=0&primary.color=F5F5F5&secondary.color=D81B60 */
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 50px;
-  padding: 0;
-  background: #9c27b0;
+/* Wrapper */
+.statusComp{
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  display: block;
+  width: calc(100% - 30px);
+  margin: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   color: white;
-  z-index: 50;
+  padding: 2em 4em;
+}
+
+/* Layout */
+.row{
   display: flex;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-}
-
-.headWrap{
-  height: 100%;
-  display: inline-block;
-  position: relative;
-  flex: 1 1 75%;
-}
-
-.headWrap nav {
-  float: right;
-  font-size: 100%;
-}
-
-.headWrap nav a {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 15px;
-  min-width: 50px;
-  text-align: center;
-  background: rgba(255,255,255,0);
-  text-decoration: none;
-  color: #fff;
-  vertical-align: top;
-}
-
-/* .headWrap nav a div{
   width: 100%;
-} */
+  margin: 8px 0;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+}
 
-.headWrap nav a.boooooooi {
+.column{
+  display: inline-block;
+  /* width: calc(25% - 10px); */
+  margin: 0 5px;
+}
+
+.column h2, .column h3{
+  margin: 2.5px 0;
   padding: 0;
 }
 
-.headWrap nav a.boooooooi div {
-  width: 50px;
+/* Progress bar and Items */
+.progBar{
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-top: 12px;
 }
 
-.headWrap nav a div div {
-  top: 50px !important;
+.progBar span{
+  display: inline-block;
+  height: 5px;
+  width: calc(100% / 7 - 4px);
+  background: white;
+  margin: 0 2px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1), 0px 1px 1px 0px rgba(0, 0, 0, 0.09), 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  transition: transform .25s ease;
 }
 
-.headWrap nav a div div ul li p{
-  padding-left: 15px;
+.progBar span:hover{
+  transform: scale(1, 2);
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
-.headWrap nav a div div ul li{
-  transition: all .3s ease;
-  background: #fff;
+.progBar span.done{
+  background: rgb(0, 200, 117);
 }
 
-.headWrap nav a div div ul li:hover{
-  background-color: #f3f3f3;
+.progBar span.readyForTesting{
+  background: rgb(0, 134, 192);
+}
+.progBar span.workingOnIt{
+  background: rgb(253, 171, 61);
+}
+.progBar span.workNeeded{
+  background: rgb(162, 93, 220);
+}
+.progBar span.needHelp{
+  background: rgb(226, 68, 92);
+}
+.progBar span.toDo{
+  background: rgb(196, 196, 196);
+}
+.progBar span.cancelled{
+  background: rgb(160, 0, 55);
 }
 
-.headWrap nav a:hover,
-.headWrap nav a:active {
-  background: #9a67ea;
-  color: #fff
+
+/* Radial progress Change Color */
+.newCircle{
+  box-shadow: inset 3px 0px 0px #fafafa, inset -3px 0px 0px #fafafa, inset 0px 3px 0px #fafafa, inset 0px -3px 0px #fafafa;
+  background: none;
 }
 
-.header nav a.active {
-  background: #320b86;
-  color: #ffffff;
+.percentage{
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+.newCircle:after{
+  background: none;
+}
+
+.newSlice{
+  background: none;
+}
+
+.newCircle .newSlice .newBar{
+  border: 0.08em solid #9a67ea;
+  background: none;
+}
+
+.newFill{
+  background: none;
+}
+
+/* H3 */
+.h3__column{
+  text-align: center;
+  display: block;
+}
+
+/* Deadline CSS */
+.deadline{
+  display: block;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Aantal Items CSS */
+.opAantal{
+  display: block;
+  text-align: center;
+  font-size: 2em;
 }
