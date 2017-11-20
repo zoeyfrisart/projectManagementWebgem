@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import Redirect from '../../components/Redirect';
 import style from './style';
 
 import webgemLogo from '../../assets/img/logo_webgem.svg';
@@ -47,11 +48,7 @@ export default class Login extends Component {
       return <div>{this.renderLogin()}</div>;
     }
     return (
-      <div class={style.team}>
-        <div class={style.content}>
-          <h2>Team: boi</h2>
-        </div>
-      </div>
+      <Redirect to="/teams" />
     );
   }
 }
