@@ -2,12 +2,6 @@ import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style';
 
-import boardShowcase from '../../assets/img/boardshowcase.jpg';
-import boardShowcaseSmall from '../../assets/img/boardshowcase@0,75x.jpg';
-import boardShowcaseSmaller from '../../assets/img/boardshowcase@0,5x.jpg';
-import boardShowcaseSmallest from '../../assets/img/boardshowcase@0,25x.jpg';
-import boardShowcaseTiny from '../../assets/img/boardshowcase@0,1x.jpg';
-
 export default class Home extends Component {
   render() {
     return (
@@ -25,7 +19,7 @@ export default class Home extends Component {
               srcset="
                 https://20578.tk/board/background-pics/boardshowcase@0,1x.jpg 400w,
                 https://20578.tk/board/background-pics/boardshowcase@0,25x.jpg 1000w,
-                https://20578.tk/board/background-pics/boardshowcase@0,5x.jpg 2000w,
+              https://20578.tk/board/background-pics/boardshowcase@0,5x.jpg 2000w,
                 https://20578.tk/board/background-pics/boardshowcase@0,75x.jpg 3000w
               "
               sizes="
@@ -54,9 +48,15 @@ export default class Home extends Component {
           </div>
         </div>
         <div role="footer" class={style.footer}>
-          <a href="https://github.com/yannick1691/projectManagementWebgem" target="_blank" rel="noopener" aria-label="Link to the Github project page."><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="https://twitter.com/niceyannick" target="_blank" rel="noopener" aria-label="Link to Twitter of NiceYannick."><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/yannick-frisart/" target="_blank" rel="noopener" aria-label="Link to LinkedIn of Yannick Frisart."><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://github.com/yannick1691/projectManagementWebgem" target="_blank" rel="noopener noreferrer" aria-label="Link to the Github project page.">
+            <i class="fa fa-github" aria-hidden="true" ></i>
+          </a>
+          <a href="https://twitter.com/niceyannick" target="_blank" rel="noopener noreferrer" aria-label="Link to Twitter of NiceYannick.">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yannick-frisart/" target="_blank" rel="noopener noreferrer" aria-label="Link to LinkedIn of Yannick Frisart.">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
           <p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 - 2018 Yannick Frisart - All rights reserved.</p>
         </div>
       </div>
