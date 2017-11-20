@@ -114,8 +114,8 @@ export default class App extends Component {
           <Profile path="/profile/" user="me" />
           <Profile path="/profile/:user" />
           <Team path="/team/" teamName="test" />
-          <Team path="/team/:teamName" />
-          <Team path="/team/:teamName/board/:boardName" />
+          <Team path="/team/:teamName" uid={this.state.uid} />
+          <Team path="/team/:teamName/board/:boardName" uid={this.state.uid} />
           <Login path="/login"
             authenticate={this.authenticate}
             twitter={twitter}

@@ -14,11 +14,6 @@ export default class Team extends Component {
     super();
     this.addBoard = this.addBoard.bind(this);
     this.removeBoard = this.removeBoard.bind(this);
-    // this.removeFish = this.removeFish.bind(this);
-    // this.updateFish = this.updateFish.bind(this);
-    // this.loadSamples = this.loadSamples.bind(this);
-    // this.addToOrder = this.addToOrder.bind(this);
-    // this.removeFromOrder = this.removeFromOrder.bind(this);
   }
 
   state = {
@@ -83,6 +78,8 @@ export default class Team extends Component {
           removeBoard={this.removeBoard}
           boards={this.state.boards}
           teamName={this.props.teamName}
+          uid={this.props.uid}
+          members={this.state.members}
         />
         <Router onChange={this.handleRoute}>
           <TeamInfo exactly path="/team/:teamname" members={this.state.members} boards={this.state.boards} />

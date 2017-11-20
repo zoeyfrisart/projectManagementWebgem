@@ -67,3 +67,13 @@ nav .boardLinkWrapper a:nth-child(2){
   justify-content: center;
   align-items: center;
 }
+
+.warningPerm{
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
