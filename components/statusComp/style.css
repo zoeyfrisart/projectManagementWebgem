@@ -1,6 +1,7 @@
 /* Wrapper */
 .statusComp{
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  /* background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); */
+  background: linear-gradient(75deg ,#7028E4 -30%, #4776E6 120%);
   display: block;
   width: calc(100% - 30px);
   margin: 15px;
@@ -68,26 +69,26 @@
 }
 
 .progBar span.done{
-  background: rgb(0, 200, 117);
+  background: rgb(128, 255, 202);
 }
 
 .progBar span.readyForTesting{
-  background: rgb(0, 134, 192);
+  background: rgb(111, 212, 252);
 }
 .progBar span.workingOnIt{
   background: rgb(253, 171, 61);
 }
 .progBar span.workNeeded{
-  background: rgb(162, 93, 220);
+  background: rgb(202, 141, 255);
 }
 .progBar span.needHelp{
-  background: rgb(226, 68, 92);
+  background: rgb(255, 120, 143);
 }
 .progBar span.toDo{
-  background: rgb(196, 196, 196);
+  background: rgb(245, 255, 192);
 }
 .progBar span.cancelled{
-  background: rgb(160, 0, 55);
+  background: rgb(255, 81, 142);
 }
 
 
