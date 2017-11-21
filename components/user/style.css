@@ -25,3 +25,31 @@ a.boooi{
 div.boooooi{
   top: 50px !important;
 }
+
+ul a.link{
+  position: relative;
+  padding: 0 16px;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.75rem;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: rgb(0,0,0);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  pointer-events: all;
+  /* margin: 0; */
+}

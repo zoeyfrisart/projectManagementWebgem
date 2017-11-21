@@ -16,12 +16,12 @@ export default class Header extends Component {
     return (
       <div class={style.headWrap}>
         <nav>
-          <Link activeClassName={style.activeBoard} href={`/teams`}>teams</Link>
           <Link>add to team</Link>
           <UserMenu
             username={this.props.username}
             userProfilePic={this.props.userProfilePic}
             logout={this.props.logout}
+            uid={this.props.uid}
           />
         </nav>
       </div>
@@ -37,7 +37,6 @@ export default class Header extends Component {
         <div class={style.headWrap}>
           <nav>
             <Link activeClassName={style.active} href="/">start</Link>
-            <Link activeClassName={style.active} href="/profile">Me</Link>
             <Link activeClassName={style.active} href="/login">login</Link>
           </nav>
         </div>
