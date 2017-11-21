@@ -46,16 +46,16 @@ export default class Profile extends Component {
               </div>
               <div>
                 <p class={style.friendHead}>call</p>
-                <a class={style.friendsAmount} href={`tel:${this.props.user.phone}`}><i class="material-icons">phone</i></a>
+                <a class={style.friendsAmount} href={`tel:${this.state.user.phone}`}><i class="material-icons">phone</i></a>
               </div>
               <div>
                 <p class={style.friendHead}>mail</p>
-                <a class={style.friendsAmount} href={`mailto:${this.props.user.email}`}><i class="material-icons">email</i></a>
+                <a class={style.friendsAmount} href={`mailto:${this.state.user.email}`}><i class="material-icons">email</i></a>
               </div>
             </footer>
           </div>
           <div class={style.profilePicWrap}>
-            <img class={style.profilePic} src={this.props.userProfilePic} />
+            <img class={style.profilePic} src={this.state.user.profilePic} />
           </div>
         </div>
       </div>

@@ -118,9 +118,6 @@ export default class App extends Component {
           <Profile path="/profile/" user="me" />
           <Profile path="/profile/:user"
             uid={this.state.uid}
-            username={this.state.username}
-            userProfilePic={this.state.userProfilePic}
-            email={this.state.email}
           />
           <Team path="/team/" teamName="test" />
           <Team path="/team/:teamName" uid={this.state.uid} />
@@ -134,9 +131,6 @@ export default class App extends Component {
           />
           <Edit path="/profile/:user/edit"
             uid={this.state.uid}
-            username={this.state.username}
-            userProfilePic={this.state.userProfilePic}
-            email={this.state.email}
           />
           <Teams path="/teams" uuid={this.state.uid} />
         </Router>
