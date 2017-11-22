@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
-import userMenu from '../user';
 import style from './style';
 
 import logo from '../../assets/img/logo.svg';
@@ -15,8 +14,9 @@ export default class Header extends Component {
   renderLoggedInNav() {
     return (
       <div class={style.headWrap}>
+        <Link class={style.logo} aria-label="start page" href="/"><img src={logo} alt={logo} /></Link>
         <nav>
-          <Link>add to team</Link>
+          <Link href="/teams">my teams</Link>
           <UserMenu
             username={this.props.username}
             userProfilePic={this.props.userProfilePic}

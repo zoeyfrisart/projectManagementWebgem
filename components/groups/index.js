@@ -102,22 +102,30 @@ export default class BoardGroup extends Component {
           <thead class={style.tableHead} style={`display: table-header-group;`}>
             <tr>
               <th scope="row" style={`text-align: left; font-size: 22px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0; padding-left: 12px;`}>
-                <input class={style.inputHeader} style={`color: ${this.props.details.color}`} name="name" onChange={(e) => this.handleChange(e, this.props.index)} type="text" value={details.name} placeholder="This is a example header (Click to edit)" />
+                <input
+                  class={style.inputHeader}
+                  style={`color: ${this.props.details.color}`}
+                  name="name"
+                  onChange={(e) => this.handleChange(e, this.props.index)}
+                  type="text"
+                  value={details.name}
+                  placeholder="This is a example header (Click to edit)"
+                />
               </th>
             </tr>
             <tr class={style.tableH}>
               {/* <th scope="row" style={`text-align: left; font-size: 18px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0;`}>
                 <input class={style.inputHeader} style={`color: ${this.props.details.color}`} name="name" onChange={(e) => this.handleChange(e, this.props.index)} type="text" value={details.name} placeholder="This is a example header (Click to edit)" />
               </th> */}
-              <th style={`width: 25%; min-width: 300px;`}>opdracht</th>
-              <th style={`width: 5%; min-width: 60px; max-width: 90px;`}>Door wie</th>
+              <th style={`width: 25%; min-width: 300px;`}>Task</th>
+              <th style={`width: 5%; min-width: 60px; max-width: 90px;`}>Made by</th>
               <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p2</th>
               <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p3</th>
               <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p4</th>
-              <th style={`min-width: 130px;`}>status</th>
-              <th style={`min-width: 100px;`}>doel</th>
-              <th style={`min-width: 100px`}>deadline</th>
-              <th style={`min-width: 100px;`}>hoelang erover gedaan</th>
+              <th style={`min-width: 130px;`}>Status</th>
+              <th style={`min-width: 100px;`}>Goal</th>
+              <th style={`min-width: 100px`}>Deadline</th>
+              <th style={`min-width: 100px;`}>Time used</th>
               <th style={`width: 3%;`}>delete</th>
             </tr>
           </thead>

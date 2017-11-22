@@ -188,7 +188,7 @@ export default class Item extends Component {
                 onChange={(e) => this.handleChange(e, this.props.index)}
                 type="number"
                 value={details.tooktime}
-                placeholder="tijd in uren"
+                placeholder="Time in hours"
               />
             </div>
             <div class={style.subRow} />
