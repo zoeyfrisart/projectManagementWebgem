@@ -54,23 +54,6 @@
   position: relative;
 }
 
-.userName{
-  font-size: 50px;
-  text-transform: uppercase;
-  font-weight: 900;
-  line-height: 49px;
-  width: 70%;
-  margin: 0;
-}
-
-.subInfoFunctie{
-  margin: 0;
-  color: #e2f7ffc0;
-  font-size: 17px;
-  font-style: italic;
-  font-weight: 400;
-}
-
 .friends{
   position: absolute;
   bottom: 30px;
@@ -103,19 +86,45 @@
   color: white;
 }
 
-blockquote {
-  quotes: "\201C""\201D""\2018""\2019";
-  margin: 40px 0;
+.editProfileInput{
+  display: block;
+  border: none;
+  outline: none;
+  padding: 25px 15px 10px;
+  margin: 0px;
+  background: none;
+  color: white;
+  border-bottom: 1px solid rgba(29, 29, 38, 0.2);
+  width: 100%;
+  font-size: 14px;
 }
 
-blockquote:before {
-  color: white;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0;
-  vertical-align: -0.4em;
+.editProfileInput::placeholder{
+  color: #ffffffc9;
 }
-blockquote p {
-  display: inline;
+
+.inputGroup{
+  position: relative;
+  overflow: hidden;
+}
+
+.inputGroup label{
+  font-size: 12px;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #ffffff90;
+  transition: .2s;
+}
+
+.inputGroup textarea{
+  resize: none;
+  border-bottom: 0;
+}
+
+.inputGroup input:focus + label,
+.inputGroup textarea:focus + label{
+  font-size: 11px;
+  color: #ffffff99;
 }

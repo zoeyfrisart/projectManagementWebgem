@@ -1,46 +1,63 @@
-import { h, Component } from 'preact';
+import { h, Component} from 'preact';
 import style from './style';
+import base from '../../base';
 
 export default class Profile extends Component {
-  state = {
-    time: Date.now(),
-    count: 10
-  };
+  constructor(props) {
+    super(props);
 
-  // gets called when this route is navigated to
-  componentDidMount() {
-    // start a timer for the clock:
-    this.timer = setInterval(this.updateTime, 1000);
+    this.state = {
+      user: {},
+      friends: {}
+    };
   }
 
-  // gets called just before navigating away from the route
+  componentWillMount(nextProps) {
+    this.ref = base.syncState(`users/${this.props.user}`, {
+      context: this,
+      state: 'user'
+    });
+    this.ref2 = base.syncState(`users/${this.props.user}/friends`, {
+      context: this,
+      state: 'friends'
+    });
+  }
+
   componentWillUnmount() {
-    clearInterval(this.timer);
+    base.removeBinding(this.ref);
+    base.removeBinding(this.ref2);
   }
-
-  // update the current time
-  updateTime = () => {
-    this.setState({ time: Date.now() });
-  };
-
-  increment = () => {
-    this.setState({ count: this.state.count+1 });
-  };
 
   // Note: `user` comes from the URL, courtesy of our router
-  render({ user }, { time, count }) {
+  render({ user }) {
     return (
       <div class={style.profile}>
-        <h1>Profile: {user}</h1>
-        <p>This is the user profile for a user named { user }.</p>
-
-        <div>Current time: {new Date(time).toLocaleString()}</div>
-
-        <p>
-          <button onClick={this.increment}>Click Me</button>
-          {' '}
-          Clicked {count} times.
-        </p>
+        {/* <header class={style.profileHeader} role="banner" /> */}
+        <div class={style.profileWrap}>
+          <div class={style.profileDesc}>
+            <h2 class={style.userName}>{this.state.user.name}</h2>
+            <p class={style.subInfoFunctie}>{this.state.user.functie}</p>
+            {/* <span class={style.subInfoEmail}>{this.state.user.email}</span> */}
+            <blockquote class={style.bio}>{this.state.user.bio}</blockquote>
+            <footer class={style.friends}>
+              <div>
+                <p class={style.friendHead}>friends</p>
+                <p class={style.friendsAmount}>{Object.keys(this.state.friends).length}</p>
+              </div>
+              <div>
+                <p class={style.friendHead}>call</p>
+                <a class={style.friendsAmount} href={`tel:${this.state.user.phone}`}><i class="material-icons">phone</i></a>
+              </div>
+              <div>
+                <p class={style.friendHead}>mail</p>
+                <a class={style.friendsAmount} href={`mailto:${this.state.user.email}`}><i class="material-icons">email</i></a>
+              </div>
+            </footer>
+          </div>
+          <div class={style.profilePicWrap}>
+            <img class={style.profilePic} src={this.state.user.profilePic} />
+          </div>
+        </div>
       </div>
     );
   }

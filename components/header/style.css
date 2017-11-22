@@ -58,6 +58,11 @@
   padding-left: 15px;
 }
 
+.headWrap nav a div div ul a p{
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
 .headWrap nav a div div ul li{
   transition: all .3s ease;
   background: #fff;
@@ -77,3 +82,39 @@
   background: #320b86;
   color: #ffffff;
 }
+
+.headWrap nav a div div ul a{
+  position: relative;
+  padding: 0 16px;
+  margin: 0;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Roboto, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.75rem;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: rgb(0,0,0);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  pointer-events: all;
+  transition: all .3s ease;
+  background: #fff;
+}
+
+.headWrap nav a div div ul a:hover{
+  background-color: #f3f3f3;
+  color: rgb(0,0,0);
+}
+

@@ -5,8 +5,11 @@ import 'preact-material-components/List/style.css';
 import 'preact-material-components/Menu/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
+import { Router } from 'preact-router';
+import { Link } from 'preact-router';
 
 export default class UserMenu extends Component {
+
   render() {
     return (
       <a style={`padding: 0;`}>
@@ -30,23 +33,23 @@ export default class UserMenu extends Component {
             open-from-top-right
             class={style.boooooi}
           >
-            <Menu.Item>
+            <Link class={style.link} href={`/profile/${this.props.uid}`}>
               <i className="material-icons">account_circle</i>
               <p>profile</p>
-            </Menu.Item>
-            <Menu.Item>
+            </Link>
+            <Link class={style.link} href={`/profile/${this.props.uid}/edit`}>
               <i className="material-icons">account_circle</i>
               <p>edit profile</p>
-            </Menu.Item>
-            <Menu.Item>
+            </Link>
+            <Link class={style.link} href={`/teams`}>
               <i className="material-icons">account_circle</i>
               <p>teams</p>
-            </Menu.Item>
+            </Link>
             <li role="separator" class="mdc-list-divider"></li>
-            <Menu.Item>
+            <Link class={style.link} href={`/settings`}>
               <i className="material-icons">account_circle</i>
               <p>settings</p>
-            </Menu.Item>
+            </Link>
             <Menu.Item onclick={this.props.logout}>
               <i className="material-icons">account_circle</i>
               <p>logout</p>

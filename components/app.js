@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
+import NotifyChange from 'preact-notify-change';
 
 import Header from './header';
 import Home from '../routes/home';
@@ -11,6 +12,7 @@ import Teams from '../routes/Teams';
 import firebase from 'firebase/app';
 require('firebase/auth');
 import fireApp from '../base2';
+import Edit from '../routes/edit/index';
 
 const github = new firebase.auth.GithubAuthProvider();
 github.addScope('user:email');
@@ -33,7 +35,8 @@ export default class App extends Component {
       uid: null,
       owner: null,
       username: null,
-      userProfilePic: null
+      userProfilePic: null,
+      email: null
     };
   }
 
@@ -65,7 +68,7 @@ export default class App extends Component {
   logout() {
     // base.unauth();
     firebase.auth(fireApp).signOut();
-    this.setState({ uid: null, username: null, userProfilePic: null });
+    this.setState({ uid: null, username: null, userProfilePic: null, email: null });
   }
 
   authHandler(err, authData)  {
@@ -94,6 +97,7 @@ export default class App extends Component {
         owner: data.owner || authData.user.uid,
         username: authData.user.displayName,
         userProfilePic: authData.user.photoURL,
+        email: authData.user.email
       });
     });
 
@@ -112,7 +116,9 @@ export default class App extends Component {
         <Router onChange={this.handleRoute}>
           <Home path="/" />
           <Profile path="/profile/" user="me" />
-          <Profile path="/profile/:user" />
+          <Profile path="/profile/:user"
+            uid={this.state.uid}
+          />
           <Team path="/team/" teamName="test" />
           <Team path="/team/:teamName" uid={this.state.uid} />
           <Team path="/team/:teamName/board/:boardName" uid={this.state.uid} />
@@ -123,8 +129,12 @@ export default class App extends Component {
             github={github}
             uid={this.state.uid}
           />
+          <Edit path="/profile/:user/edit"
+            uid={this.state.uid}
+          />
           <Teams path="/teams" uuid={this.state.uid} />
         </Router>
+        <NotifyChange />
       </div>
     );
   }
