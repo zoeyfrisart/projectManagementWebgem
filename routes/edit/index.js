@@ -1,4 +1,4 @@
-import { h, Component} from 'preact';
+import { h, Component } from 'preact';
 import style from './style';
 import base from '../../base';
 
