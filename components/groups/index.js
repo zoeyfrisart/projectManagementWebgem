@@ -102,7 +102,15 @@ export default class BoardGroup extends Component {
           <thead class={style.tableHead} style={`display: table-header-group;`}>
             <tr>
               <th scope="row" style={`text-align: left; font-size: 22px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0; padding-left: 12px;`}>
-                <input class={style.inputHeader} style={`color: ${this.props.details.color}`} name="name" onChange={(e) => this.handleChange(e, this.props.index)} type="text" value={details.name} placeholder="This is a example header (Click to edit)" />
+                <input
+                  class={style.inputHeader}
+                  style={`color: ${this.props.details.color}`}
+                  name="name"
+                  onChange={(e) => this.handleChange(e, this.props.index)}
+                  type="text"
+                  value={details.name}
+                  placeholder="This is a example header (Click to edit)"
+                />
               </th>
             </tr>
             <tr class={style.tableH}>

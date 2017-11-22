@@ -5,7 +5,6 @@ import 'preact-material-components/List/style.css';
 import 'preact-material-components/Menu/style.css';
 import 'preact-material-components/Button/style.css';
 import style from './style';
-import { Router } from 'preact-router';
 import { Link } from 'preact-router';
 
 export default class UserMenu extends Component {
@@ -18,7 +17,8 @@ export default class UserMenu extends Component {
             onClick={e => {
               if (this.menu.MDComponent.open !== true){
                 this.menu.MDComponent.open = true;
-              } else {
+              }
+              else {
                 this.menu.MDComponent.open = false;
               }
             }}
@@ -45,7 +45,7 @@ export default class UserMenu extends Component {
               <i className="material-icons">group_add</i>
               <p>add to team</p>
             </Link>
-            <li role="separator" class="mdc-list-divider"></li>
+            <li role="separator" class="mdc-list-divider" />
             <Link class={style.link} href={`/settings`}>
               <i className="material-icons">settings</i>
               <p>settings</p>

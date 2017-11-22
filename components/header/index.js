@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
-import userMenu from '../user';
 import style from './style';
 
 import logo from '../../assets/img/logo.svg';

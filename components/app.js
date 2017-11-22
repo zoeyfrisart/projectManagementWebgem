@@ -87,7 +87,7 @@ export default class App extends Component {
       const data = snapshot.val() || {};
 
       // claim it as our own if there is no owner already
-      if(!data.owner) {
+      if (!data.owner) {
         globalRef.set({
           owner: authData.user.uid
         });
