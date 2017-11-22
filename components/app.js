@@ -13,6 +13,7 @@ import firebase from 'firebase/app';
 require('firebase/auth');
 import fireApp from '../base2';
 import Edit from '../routes/edit/index';
+import Settings from '../routes/settings/index';
 
 const github = new firebase.auth.GithubAuthProvider();
 github.addScope('user:email');
@@ -130,6 +131,9 @@ export default class App extends Component {
             uid={this.state.uid}
           />
           <Edit path="/profile/:user/edit"
+            uid={this.state.uid}
+          />
+          <Settings path="/settings"
             uid={this.state.uid}
           />
           <Teams path="/teams" uuid={this.state.uid} />

@@ -38,6 +38,19 @@
   vertical-align: top;
 }
 
+.headWrap a.logo{
+  width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.headWrap a.logo img{
+  width: 100%;
+}
+
 /* .headWrap nav a div{
   width: 100%;
 } */

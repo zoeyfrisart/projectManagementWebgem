@@ -82,11 +82,11 @@ export default class StatusComp extends Component {
               onChange={(e) => this.handleChange(e)}
               name="opdrachtgever"
               value={this.state.board.opdrachtgever}
-              placeholder="naam opdrachtgever"
+              placeholder="name of client"
             />
           </div>
           <div class={style.column}>
-            <h3 class={style.h3__column}>deadline in</h3>
+            <h3 class={style.h3__column}>Deadline in</h3>
             <input
               type="text"
               class={style.deadlineEdit}
@@ -97,14 +97,14 @@ export default class StatusComp extends Component {
             />
           </div>
           <div class={style.column}>
-            <h3 class={style.h3__column}>Totaal aantal opdrachten</h3>
+            <h3 class={style.h3__column}>Tasks</h3>
             <input
               type="text"
               class={style.opdrachtgever}
               onChange={(e) => this.handleChange(e)}
               name="totalOpdracht"
               value={this.state.board.totalOpdracht}
-              placeholder="Totaal aantal opdrachten."
+              placeholder="tasks."
             />
           </div>
         </div>
@@ -138,11 +138,11 @@ export default class StatusComp extends Component {
             <h3>{this.state.board.opdrachtgever}</h3>
           </div>
           <div class={style.column}>
-            <h3 class={style.h3__column}>deadline in</h3>
+            <h3 class={style.h3__column}>Deadline in</h3>
             <span class={style.deadline}>{this.calculateDayDeadline()}</span>
           </div>
           <div class={style.column}>
-            <h3 class={style.h3__column}>Totaal aantal opdrachten</h3>
+            <h3 class={style.h3__column}>Tasks</h3>
             <span class={style.opAantal}>{this.state.board.totalOpdracht}</span>
           </div>
         </div>

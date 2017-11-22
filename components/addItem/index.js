@@ -20,7 +20,7 @@ export default class AddItem extends Component{
     return (
       <div class={style.newItem}>
         <form ref={input => (this.addItemForm = input)} class={style.newItemForm} onSubmit={(e) => this.addItem(e) }>
-          <input required ref={input => (this.name = input)} type="text" placeholder="Omschrijving van de opdracht" />
+          <input required ref={input => (this.name = input)} type="text" placeholder="Description of task" />
         </form>
       </div>
     );
