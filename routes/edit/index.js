@@ -6,6 +6,9 @@ export default class Edit extends Component {
   constructor(props) {
     super(props);
 
+    this.handleChange = this.handleChange.bind(this);
+    this.updateUser = this.updateUser.bind(this);
+
     this.state = {
       user: {},
       friends: {}
@@ -28,36 +31,91 @@ export default class Edit extends Component {
     base.removeBinding(this.ref2);
   }
 
+  // Function to update User.
+  updateUser(updatedUser) {
+    let user = { ...this.state.user };
+    user = updatedUser;
+    this.setState({ user });
+  }
+
+  // Function to handle change.
+  handleChange(e) {
+    const userData = this.state.user;
+    const updatedUser = {
+      ...userData,
+      [e.target.name]: e.target.value
+    };
+    this.updateUser(updatedUser);
+  }
+
   // Note: `user` comes from the URL, courtesy of our router
   render({ user }) {
     return (
       <div class={style.profile}>
-        {/* <header class={style.profileHeader} role="banner" /> */}
         <div class={style.profileWrap}>
           <div class={style.profileDesc}>
-            <h2 class={style.userName}>{this.state.user.name}</h2>
-            <p class={style.subInfoFunctie}>{this.state.user.functie}</p>
-            {/* <span class={style.subInfoEmail}>{this.state.user.email}</span> */}
-            <textarea class={style.bio} rows="7" cols="40" maxlength="150">
-              {this.state.user.bio}
-            </textarea>
-            <footer class={style.friends}>
-              <div>
-                <p class={style.friendHead}>friends</p>
-                <p class={style.friendsAmount}>{Object.keys(this.state.friends).length}</p>
-              </div>
-              <div>
-                <p class={style.friendHead}>call</p>
-                <a class={style.friendsAmount} href={`tel:${this.props.user.phone}`}><i class="material-icons">phone</i></a>
-              </div>
-              <div>
-                <p class={style.friendHead}>mail</p>
-                <a class={style.friendsAmount} href={`mailto:${this.props.user.email}`}><i class="material-icons">email</i></a>
-              </div>
-            </footer>
+            <div class={style.inputGroup}>
+              <input
+                class={style.editProfileInput}
+                name="name"
+                placeholder="Display name"
+                value={this.state.user.name}
+                onChange={(e) => this.handleChange(e)}
+                id="name"
+              />
+              <label for="name">Display name</label>
+            </div>
+            <div class={style.inputGroup}>
+              <input
+                class={style.editProfileInput}
+                placeholder="Your function / Title"
+                name="functie"
+                value={this.state.user.functie}
+                onChange={(e) => this.handleChange(e)}
+                id="function"
+              />
+              <label for="function">Your function / Title</label>
+            </div>
+            <div class={style.inputGroup}>
+              <input
+                class={style.editProfileInput}
+                placeholder="example@example.com"
+                name="email"
+                value={this.state.user.email}
+                onChange={(e) => this.handleChange(e)}
+                id="email"
+              />
+              <label for="email">Your email</label>
+            </div>
+            <div class={style.inputGroup}>
+              <input
+                class={style.editProfileInput}
+                placeholder="06 xxxx xxxx"
+                name="phone"
+                value={this.state.user.phone}
+                onChange={(e) => this.handleChange(e)}
+                id="number"
+              />
+              <label for="number">Your number</label>
+            </div>
+            <div class={style.inputGroup}>
+              <textarea
+                placeholder="Your bio, describe yourself here"
+                class={style.editProfileInput}
+                onChange={(e) => this.handleChange(e)}
+                name="bio"
+                rows="8"
+                cols="40"
+                maxlength="150"
+                id="bio"
+              >
+                {this.state.user.bio}
+              </textarea>
+              <label for="bio">Your bio</label>
+            </div>
           </div>
           <div class={style.profilePicWrap}>
-            <img class={style.profilePic} src={this.props.userProfilePic} />
+            <img class={style.profilePic} src={this.state.user.profilePic} />
           </div>
         </div>
       </div>
