@@ -56,7 +56,7 @@ const personen = [
     title: 'Clear',
     personen: [
       {
-        name: '',
+        name: 'none',
         functie: 'reset',
         img: 'https://20578.tk/board/user-profilepics/none.png'
       }
