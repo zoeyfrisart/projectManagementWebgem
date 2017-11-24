@@ -44,16 +44,16 @@ export default class Item extends Component {
         <td style={`width: 25%; min-width: 300px;`}>
           <div class={style.innerWrap} style={`border-left: 3.5px solid ${this.props.color}`}>
             <div class={style.subRow}>
-              <input
+              <textarea
+                rows="2"
                 class={style.inputDesc}
                 name="desc"
                 onChange={(e) => this.handleChange(e, this.props.index)}
-                type="text"
-                value={details.desc}
                 placeholder="This is a example description (Click to edit)"
-              />
+              >
+                {details.desc}
+              </textarea>
             </div>
-            <div class={style.subRow} />
           </div>
         </td>
         <td style={`min-width: 60px; width: 5%; max-width: 90px;`}>
