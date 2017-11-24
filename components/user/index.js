@@ -46,10 +46,10 @@ export default class UserMenu extends Component {
               <p>add to team</p>
             </Link>
             <li role="separator" class="mdc-list-divider" />
-            <Link class={style.link} href={`/settings`}>
+            {/* <Link class={style.link} href={`/settings`}>
               <i className="material-icons">settings</i>
               <p>settings</p>
-            </Link>
+            </Link> */}
             <Menu.Item onclick={this.props.logout}>
               <i className="material-icons">close</i>
               <p>logout</p>
