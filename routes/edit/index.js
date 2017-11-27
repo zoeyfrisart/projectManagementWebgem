@@ -10,25 +10,19 @@ export default class Edit extends Component {
     this.updateUser = this.updateUser.bind(this);
 
     this.state = {
-      user: {},
-      friends: {}
+      user: {}
     };
   }
 
   componentWillMount(nextProps) {
-    this.ref = base.syncState(`users/${this.props.user}`, {
+    this.ref = base.syncState(`users/${this.props.uid}`, {
       context: this,
       state: 'user'
-    });
-    this.ref2 = base.syncState(`users/${this.props.user}/friends`, {
-      context: this,
-      state: 'friends'
     });
   }
 
   componentWillUnmount() {
     base.removeBinding(this.ref);
-    base.removeBinding(this.ref2);
   }
 
   // Function to update User.

@@ -43,12 +43,12 @@ const personen = [
       {
         name: 'Maurice',
         functie: 'Stagair',
-        img: 'https://20578.tk/board/user-profilepics/none.png'
+        img: 'https://20578.tk/board/user-profilepics/maurice.png'
       },
       {
         name: 'Patrick',
         functie: 'Stagair',
-        img: 'https://20578.tk/board/user-profilepics/none.png'
+        img: 'https://20578.tk/board/user-profilepics/patrick.png'
       }
     ]
   },
@@ -116,10 +116,10 @@ function getImg(newValue) {
     return 'https://20578.tk/board/user-profilepics/coen.png';
   }
   else if (newValue === 'Maurice') {
-    return 'https://20578.tk/board/user-profilepics/none.png';
+    return 'https://20578.tk/board/user-profilepics/maurice.png';
   }
   else if (newValue === 'Patrick') {
-    return 'https://20578.tk/board/user-profilepics/none.png';
+    return 'https://20578.tk/board/user-profilepics/patrick.png';
   }
   return 'https://20578.tk/board/user-profilepics/none.png';
 }

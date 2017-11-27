@@ -11,7 +11,7 @@ export default class Home extends Component {
             <h1 class={style.homeH1}>Project management <br />reinvented.</h1>
             <p class={style.homeP1}>A project management tool that is aimed to be visually pleasing.</p>
             <Link role="button" href="/login" class={style.button}>sign up</Link>
-            <Link role="button" href="/team/webgem" class={style.button}>live demo</Link>
+            <Link role="button" href="/team/Example/board/board-1511521540685" class={style.button}>live demo</Link>
           </div>
           <div class={style.sideImg}>
             <img
