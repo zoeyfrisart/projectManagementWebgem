@@ -1,8 +1,8 @@
 nav a.boooi{
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  display: inline-flex;
   height: 100%;
+  justify-content: center;
   vertical-align: top;
 }
 
@@ -11,15 +11,15 @@ nav a.boooi div.mdc-menu-anchor div{
 }
 
 nav a.booi div.booi2{
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 a.boooi{
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 div.boooooi{
@@ -27,29 +27,24 @@ div.boooooi{
 }
 
 ul a.link{
-  position: relative;
-  padding: 0 16px;
-  outline: none;
-  color: inherit;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: Roboto, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.75rem;
-  text-decoration: inherit;
-  text-transform: inherit;
+  align-items: center;
   color: rgb(0,0,0);
   display: flex;
-  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   height: 100%;
-  align-items: center;
+  letter-spacing: 0.04em;
+  line-height: 1.75rem;
+  outline: none;
   pointer-events: all;
-  /* margin: 0; */
+  position: relative;
+  padding: 0 16px;
+  text-decoration: none;
+  user-select: none;
+  text-decoration: inherit;
+  text-transform: inherit;
+  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }

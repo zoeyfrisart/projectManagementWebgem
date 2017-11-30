@@ -8,28 +8,25 @@ tbody tr.tableRow{
 }
 
 tbody tr.tableRow td{
-  margin: 1px;
   border-bottom: 1px solid #e9e9e9;
-  white-space: nowrap;
+  display: table-cell;
+  margin: 1px;
   padding: 0;
   width: 10%;
-  display: table-cell;
+  white-space: nowrap;
 }
 
 .innerWrap{
   background: #f8f8f8;
-  padding: 0;
-  height: 50px;
   color: #596496;
   display: block;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  width: auto;
   font-size: 13px;
+  outline: 0;
+  padding: 0;
+  height: 50px;
+  text-decoration: none;
+  user-select: none;
+  width: auto;
 }
 
 tbody tr.tableRow:nth-child(odd) td .innerWrap{
@@ -38,36 +35,35 @@ tbody tr.tableRow:nth-child(odd) td .innerWrap{
 
 .innerWrap input{
   background: none;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  padding: 5px 10px;
-  display: flex;
+  border: 0;
+  box-shadow: 0;
   color: #596496;
-  font-size: 13px;
+  display: flex;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  outline: 0;
+  padding: 5px 10px;
   text-align: center;
+  width: 100%;
 }
 
 .innerWrap textarea{
-  background: none;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  padding: 5px 10px;
-  display: flex;
-  color: #596496;
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  resize: none;
-  overflow-y: hidden;
-  display: flex;
   align-content: center;
+  background: none;
+  border: 0;
+  color: #596496;
+  box-shadow: 0;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  outline: 0;
+  overflow-y: hidden;
+  padding: 5px 10px;
+  resize: none;
+  text-align: left;
+  width: 100%;
 }
 
 .innerWrap input.inputDesc{
@@ -77,11 +73,11 @@ tbody tr.tableRow:nth-child(odd) td .innerWrap{
 }
 
 .perwrap {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .personimg{
@@ -89,22 +85,22 @@ tbody tr.tableRow:nth-child(odd) td .innerWrap{
 }
 
 .suggestionContent {
-  display: flex;
   align-items: center;
   background-repeat: no-repeat;
+  display: flex;
 }
 
 button.deleteItem{
   background: none;
-  outline: none;
-  border: none;
-  border-radius: none;
-  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0;
   display: block;
-  width: 100%;
   height: 35px;
-  padding: 3px;
   margin: 0;
+  outline: 0;
+  padding: 3px;
+  width: 100%;
 }
 
 button.deleteItem img{
@@ -129,21 +125,21 @@ input.deadline::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
 ::-webkit-datetime-edit-year-field { color: purple; } */
 
 .subRow{
-  height: 35px;
-  width: 100%;
   display: block;
+  height: 35px;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .subRow:last-of-type{
-  height: 15px;
-  width: 100%;
   display: block;
+  height: 15px;
   margin: 0;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
   text-overflow: ellipsis;
+  width: 100%;
 }
 
 .subRow:only-of-type{
@@ -151,18 +147,17 @@ input.deadline::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
 }
 
 .subRow:last-of-type p{
-  padding: 0 3px;
-  padding-bottom: 3px;
-  margin: 0;
+  box-sizing: border-box;
+  color: #333333;
   display: block;
-  width: 100%;
+  font-size: 0.9em;
+  margin: 0;
   max-width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0 3px 3px;
   text-align: center;
-  font-size: 0.9em;
-  color: #333333;
-  box-sizing: border-box;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 .inPast{

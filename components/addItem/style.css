@@ -1,9 +1,8 @@
 .newItem{
-  display: flex;
   align-items: center;
-  padding: 0;
+  display: flex;
   margin: 0;
-  /* border-left: 7.5px solid #eee */
+  padding: 0;
 }
 
 .newItem img{
@@ -12,31 +11,27 @@
 }
 
 .newItemForm{
-  width: calc(100% - 1px);
-  min-width: 308px;
   display: flex;
-  padding: 0;
-  margin: 0;
   height: 35px;
+  margin: 0;
+  min-width: 308px;
+  padding: 0;
+  width: calc(100% - 1px);
 }
 
 .newItemForm input{
-  width: 100%;
   background: none;
-  box-shadow: none;
-  outline: none;
-  border: none;
+  border: 1px solid #eee;
   border-left: 3.5px solid #eee;
-  border-top: 1px solid #eee;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  /* border-left: 7px solid ##c2c2c2; */
-  font-size: 14px;
-  padding: 10px;
-  margin: 0;
+  box-shadow: 0;
   color: #333;
-  transition: all .2s ease-in-out;
+  font-size: 14px;
   height: 35px;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+  transition: all .2s ease-in-out;
+  width: 100%;
 }
 
 .newItemForm input::placeholder{
@@ -49,17 +44,17 @@
 }
 
 .newItemForm button{
-  background: none;
-  outline: none;
-  border: none;
-  box-shadow: none;
-  border: 2px solid #d81b60;
-  font-size: 20px;
-  color: #d81b60;
-  padding: 0 10px;
-  display: flex;
   align-items: center;
+  background: none;
+  border: 0;
+  border: 2px solid #d81b60;
+  box-shadow: 0;
+  color: #d81b60;
+  display: flex;
+  font-size: 20px;
   justify-content: center;
+  outline: 0;
+  padding: 0 10px;
 }
 
 .newItemForm button:hover{

@@ -50,6 +50,10 @@ export default class UserMenu extends Component {
               <i className="material-icons">settings</i>
               <p>settings</p>
             </Link> */}
+            <Link class={style.link} href={`/teams`}>
+              <i className="material-icons">group</i>
+              <p>my teams</p>
+            </Link>
             <Menu.Item onclick={this.props.logout}>
               <i className="material-icons">close</i>
               <p>logout</p>

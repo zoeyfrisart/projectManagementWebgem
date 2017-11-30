@@ -7,87 +7,89 @@
   text-align: center;
 }
 
+@media (max-width: 560px){
+  .content h2{
+    display: none;
+  }
+}
+
 .teamsContent{
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .cardWrap{
   display: inline-block;
-  width: 20%;
-  min-width: 300px;
   margin: 5px;
+  min-width: 300px;
+  width: 20%;
 }
 
 .cardWrap h1{
+  color: white;
   font-size: 25px;
   text-transform: uppercase;
-  color: white;
 }
 
 .cardBackcolor{
+  align-items: center;
   background: #9c27b0;
   color: white;
-  margin-left: -16px;
-  margin-top: -16px;
-  margin-right: -16px;
-  margin-bottom: -16px;
-  height: 175px;
   display: flex;
+  height: 175px;
   justify-content: center;
-  align-items: center;
+  margin-bottom: -16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: -16px;
   padding: 16px;
 }
 
 .buttonSubmit{
+  border: 0;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
   font-family: Roboto, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   font-size: 0.875rem;
   font-weight: 500;
+  height: 36px;
   letter-spacing: 0.04em;
   line-height: 2.25rem;
+  min-width: 88px;
+  padding: 0 16px;
+  position: relative;
+  outline: 0;
+  overflow: hidden;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  display: inline-block;
-  position: relative;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  min-width: 88px;
-  height: 36px;
-  padding: 0 16px;
-  border: none;
-  outline: none;
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-appearance: none;
-  overflow: hidden;
   vertical-align: middle;
-  border-radius: 2px;
-  color: white;
+  -webkit-appearance: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .teamInput{
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #eee;
+  color: #333;
+  font-size: 15px;
   height: 35px;
-  width: 142px;
   margin-left: 0px;
   margin-right: 8px;
   padding: 5px 10px;
-  border: none;
-  border-bottom: 2px solid #eee;
-  background: none;
-  color: #333;
-  font-size: 15px;
+  width: 142px;
 }
 
 .teamInput:focus{
-  border: none;
-  outline: none;
+  border: 0;
   border-bottom: 2px solid #9c27b0;
   color: #9c27b0;
+  outline: 0;
 }

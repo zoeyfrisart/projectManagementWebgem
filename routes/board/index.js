@@ -3,8 +3,10 @@ import style from './style';
 
 import BoardGroup from '../../components/groups';
 import NewGroup from '../../components/newGroup';
+import NewMobileGroup from '../../components/newGroupMobile';
 import StatusComp from '../../components/statusComp';
 import base from '../../base';
+import MediaQuery from 'react-responsive';
 
 export default class Board extends Component {
   constructor() {
@@ -54,22 +56,28 @@ export default class Board extends Component {
   render({ teamname }, { boards, members, user }) {
     return (
       <div class={style.board}>
-        <StatusComp
-          boardName={this.props.boardName}
-          teamname={this.props.teamname}
-        />
+        <MediaQuery query="(min-width: 561px)">
+          <StatusComp
+            boardName={this.props.boardName}
+            teamname={this.props.teamname}
+          />
+        </MediaQuery>
         <div class={style.boardGroupWrapper}>
           {
             Object
               .keys(this.state.groups)
               .map(key => <BoardGroup key={key} index={key} details={this.state.groups[key]} teamname={teamname} boardName={this.props.boardName} addGroup={this.addGroup} updateGroup={this.updateGroup} removeGroup={this.removeGroup} members={this.props.members} />)
           }
-          <NewGroup
-            addGroup={this.addGroup}
-            teamname={teamname}
-            boardName={this.props.boardName}
-          />
-          {/* <BoardGroup details={this.state.groups} /> */}
+          <MediaQuery query="(min-width: 561px)">
+            <NewGroup
+              addGroup={this.addGroup}
+              teamname={teamname}
+              boardName={this.props.boardName}
+            />
+          </MediaQuery>
+          <MediaQuery query="(max-width: 560px)">
+            <NewMobileGroup></NewMobileGroup>
+          </MediaQuery>
         </div>
       </div>
     );

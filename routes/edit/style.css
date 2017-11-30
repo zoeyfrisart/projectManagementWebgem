@@ -1,67 +1,65 @@
 /* https://material.io/color/#!/?view.left=0&view.right=0&primary.color=F5F5F5&secondary.color=D81B60 */
 .profile {
-  min-height: calc(100vh - 50px);
-  width: 100%;
+  background: linear-gradient(225deg, rgba(250, 217, 97, 0.6) 0%, rgba(255, 90, 206, 0.6) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(225deg, rgba(250, 217, 97, 0.6) 0%, rgba(255, 90, 206, 0.6) 100%);
+  min-height: calc(100vh - 50px);
+  width: 100%;
 }
 
 .profileWrap{
-  margin: 0 90px;
-  border-radius: 10px;
-  background: linear-gradient(75deg ,#42A5F5 -30%, #4776E6 120%);
-  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12);
-  position: relative;
-  /* margin-top: -75px; */
-  display: flex;
-
-  width: 90%;
-  max-width: 900px;
   align-self: center;
-  padding: 0;
-  overflow: hidden;
+  background: linear-gradient(75deg ,#42A5F5 -30%, #4776E6 120%);
+  border-radius: 10px;
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12);
   color: white;
+  display: flex;
+  margin: 0 90px;
+  max-width: 900px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 90%;
 }
 
 .profilePicWrap{
-  height: 500px;
-  width: 65%;
-  flex: 1 0 65%;
   align-self: center;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+  flex: 1 0 65%;
+  height: 500px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 65%;
 }
 
 .profilePic{
+  filter: grayscale(0.5);
+  height: 100%;
   object-fit: cover;
   object-position: center center;
-  width: 100%;
-  height: 100%;
   position: relative;
-  filter: grayscale(0.5);
+  width: 100%;
 }
 
 .profileDesc{
-  width: 50%;
   flex: 1 1 50%;
   padding: 40px;
   position: relative;
+  width: 50%;
 }
 
 .friends{
-  position: absolute;
   bottom: 30px;
-  left: 30px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  width: 100%;
   grid-gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  left: 30px;
+  position: absolute;
+  width: 100%;
 }
 
 .friends div{
@@ -69,34 +67,34 @@
 }
 
 .friendHead{
-  text-transform: uppercase;
   color: #e2f7ffc0;
-  font-weight: 400;
-  text-align: center;
   display: block;
+  font-weight: 400;
   margin: 5px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .friendsAmount{
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  display: block;
-  margin: 5px;
   color: white;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px;
+  text-align: center;
 }
 
 .editProfileInput{
-  display: block;
-  border: none;
-  outline: none;
-  padding: 26px 15px 10px;
-  margin: 0px;
   background: none;
-  color: white;
+  border: 0;
   border-bottom: 1px solid rgba(29, 29, 38, 0.2);
-  width: 100%;
+  color: white;
+  display: block;
   font-size: 14px;
+  margin: 0;
+  outline: 0;
+  padding: 26px 15px 10px;
+  width: 100%;
 }
 
 .editProfileInput::placeholder{
@@ -104,27 +102,27 @@
 }
 
 .inputGroup{
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .inputGroup label{
+  color: #ffffff90;
   font-size: 12px;
+  left: 15px;
   margin: 0;
   position: absolute;
   top: 10px;
-  left: 15px;
-  color: #ffffff90;
   transition: .2s;
 }
 
 .inputGroup textarea{
-  resize: none;
   border-bottom: 0;
+  resize: none;
 }
 
 .inputGroup input:focus + label,
 .inputGroup textarea:focus + label{
-  font-size: 11px;
   color: #ffffff99;
+  font-size: 11px;
 }

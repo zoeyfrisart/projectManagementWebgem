@@ -1,29 +1,29 @@
 /* Login page */
 .login{
-  display: flex;
-  justify-content: center;
-  width: 62.11%;
-  box-sizing: border-box;
-  min-width: 360px;
-  flex-direction: row;
   align-items: center;
-  height: 650px;
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 15px;
   background: linear-gradient(228.62deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  justify-content: center;
+  min-width: 360px;
   overflow: hidden;
+  width: 62.11%;
 }
 
 /* login Wrapper */
 .loginWrap{
-  display: flex;
-  box-sizing: border-box;
-  justify-content: center;
   align-items: center;
-  height: calc(100vh - 50px);
-  width: 100%;
-  background-blend-mode: overlay;
   background: linear-gradient(225deg, rgba(250, 217, 97, 0.6) 0%, rgba(255, 90, 206, 0.6) 100%);
+  background-blend-mode: overlay;
+  box-sizing: border-box;
+  display: flex;
+  height: calc(100vh - 50px);
+  justify-content: center;
+  width: 100%;
 }
 
 .loginWrap *{
@@ -31,68 +31,68 @@
 }
 
 .loginWith{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
   align-items: stretch;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 50px;
+  width: 100%;
 }
 
 .loginWith button{
-  border: none;
-  outline: none;
-  padding: 10px;
+  border: 0;
   border-radius: 4px;
+  outline: 0;
+  padding: 10px;
 }
 
 .signup{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-image: url("https://20578.tk/board/background-pics/background-login@2x.jpg");
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
   position: relative;
+  width: 50%;
 }
 
 .loginhalf{
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 50%;
   background: white;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  justify-content: center;
+  width: 50%;
 }
 
 .lineSub {
-  height: 3px;
-  width: 80%;
-  opacity: 0.8;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
   background: linear-gradient(225deg, #FAD961 0%, #FF5ACD 100%);
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
   display: block;
+  height: 3px;
   margin: 1.76% 0;
+  opacity: 0.8;
+  width: 80%;
 }
 
 .lineMain {
-  height: 3px;
-  width: 100%;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
   background: linear-gradient(225deg, #FAD961 0%, #FF5ACD 100%);
+  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
   display: block;
+  height: 3px;
   margin: 15px 0;
+  width: 100%;
 }
 
 .logoWrap{
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 55%;
   z-index: 3;
 }
@@ -103,86 +103,85 @@
 
 .backgroundGradient{
   background: linear-gradient(228.62deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
-  position: absolute;
-  width: 100%;
   height: 100%;
-  top: 0;
   left: 0;
   opacity: 0.52;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .loginHalf h2{
-  height: 42px;
-  width: 104px;
   color: #4A4A4A;
   font-family: Roboto;
   font-size: 36px;
   font-weight: 900;
+  height: 42px;
   line-height: 42px;
   text-align: center;
+  width: 104px;
 }
 
 .loginHalfH2{
-  margin: 0;
   color: #393939;
   font-family: Roboto;
   font-size: 36px;
   font-weight: 900;
   line-height: 37px;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 button.loginBut{
   background: linear-gradient(75deg ,#7028E4 -30%, #4776E6 120%);
-  border: none;
-  outline: none;
-  text-align: center;
-  width: 300px;
-  height: 50px;
+  border: 0;
   border-radius: 25px;
-  color: white;
-  margin: 5px 0;
   color: #FFFFFF;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 19px;
   font-weight: 300;
+  height: 50px;
+  margin: 5px 0;
+  outline: 0;
+  text-align: center;
+  width: 300px;
 }
 
 .lineLogin{
-  width: 80%;
   background: linear-gradient(225deg, #FF3CAC 0%, #784BA0 51.53%, #2B86C5 100%);
   height: 4px;
   margin-bottom: 10px;
   margin-top: 3px;
+  width: 80%;
 }
 
 /* Form login */
 .loginForm{
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 75%;
 }
 
 .loginForm input{
-  width: 90%;
-  height: 40px;
-  border: none;
-  outline: none;
+  border: 0;
+  border-bottom: 2px solid rgba(20%,20%,20%,0.2);
   color: #888888;
-  font-family: Roboto;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;;
   font-size: 22px;
   font-weight: 300;
+  height: 40px;
   line-height: 28px;
-  display: inline-block;
-  border-bottom: 2px solid rgba(20%,20%,20%,0.2);
+  outline: 0;
   transition: all .3s ease;
+  width: 90%;
 }
 
 .loginForm input:focus{
-  outline: none;
   border-color: rgba(20%,20%,20%,0.5);
+  outline: none;
 }
 
 .loginForm input::placeholder{
@@ -205,16 +204,45 @@ button.loginBut{
 }
 
 .loginSubmit {
-  width: 100%;
+  background: none;
+  border: 0;
   color: #86149D;
   font-family: Roboto;
   font-size: 22px;
   font-weight: 300;
   line-height: 33px;
-  border: none;
-  outline: none;
-  background: none;
-  text-align: right;
+  outline: 0;
   padding: 10px;
   padding-right: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+/* Mobile Login */
+@media (max-width: 560px){
+  .login{
+    background: #fafafa;
+    box-shadow: 0;
+    display: block;
+    height: 100%;
+    min-width: 300px;
+    width: 100%;
+  }
+  .loginhalf{
+    background: #fafafa;
+    display: block;
+    height: 100%;
+    margin-top: 150px;
+    width: 100%;
+  }
+  .signup{
+    display: none;
+  }
+
+  .loginWrap{
+    background: #fafafa;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
 }

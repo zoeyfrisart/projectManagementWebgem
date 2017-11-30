@@ -3,11 +3,14 @@ import base from '../../base';
 
 import Item from '../item';
 import AddItem from '../addItem';
+import MobileItem from '../mobileItem';
 
 import '@material/button/dist/mdc.button.min.css';
 import style from './style';
 // import dist from 'react-autosuggest';
 import { BlockPicker } from 'react-color';
+import MediaQuery from 'react-responsive';
+import { Link } from 'preact-router';
 
 export default class BoardGroup extends Component {
   constructor(props) {
@@ -98,43 +101,45 @@ export default class BoardGroup extends Component {
     const details = this.props.details;
     return (
       <div class={style.groupWrap}>
-        <table cellpadding="2" cellSpacing="2" class={style.group}>
-          <thead class={style.tableHead} style={`display: table-header-group;`}>
-            <tr>
-              <th scope="row" style={`text-align: left; font-size: 22px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0; padding-left: 12px;`}>
-                <input
-                  class={style.inputHeader}
-                  style={`color: ${this.props.details.color}`}
-                  name="name"
-                  onChange={(e) => this.handleChange(e, this.props.index)}
-                  type="text"
-                  value={details.name}
-                  placeholder="This is a example header (Click to edit)"
-                />
-              </th>
-            </tr>
-            <tr class={style.tableH}>
+        <MediaQuery query="(min-width: 561px)">
+          <table cellpadding="2" cellSpacing="2" class={style.group}>
+            <thead class={style.tableHead} style={`display: table-header-group;`}>
+              <tr>
+                <th scope="row" style={`text-align: left; font-size: 22px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0; padding-left: 12px;`}>
+                  <input
+                    class={style.inputHeader}
+                    style={`color: ${this.props.details.color}`}
+                    name="name"
+                    onChange={(e) => this.handleChange(e, this.props.index)}
+                    type="text"
+                    value={details.name}
+                    placeholder="This is a example header (Click to edit)"
+                  />
+                </th>
+              </tr>
+              <tr class={style.tableH}>
               {/* <th scope="row" style={`text-align: left; font-size: 18px; color: ${this.props.details.color}; width: 25%; min-width: 300px; margin: 0 1px 0 0;`}>
                 <input class={style.inputHeader} style={`color: ${this.props.details.color}`} name="name" onChange={(e) => this.handleChange(e, this.props.index)} type="text" value={details.name} placeholder="This is a example header (Click to edit)" />
               </th> */}
-              <th style={`width: 25%; min-width: 300px;`}>Task</th>
-              <th style={`width: 5%; min-width: 60px; max-width: 90px;`}>Made by</th>
-              <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p2</th>
-              <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p3</th>
-              <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p4</th>
-              <th style={`min-width: 130px;`}>Status</th>
-              <th style={`min-width: 100px;`}>Goal</th>
-              <th style={`min-width: 100px`}>Deadline</th>
-              <th style={`min-width: 100px;`}>Time used</th>
-              <th style={`width: 3%;`}>delete</th>
-            </tr>
-          </thead>
-          <tbody class={style.tableBody} style={`display: table-row-group;`}>
-            {
-              Object
-                .keys(this.state.items)
-                .map(key => <Item key={key} index={key} updateItem={this.updateItem} details={this.state.items[key]} teamname={this.props.teamname} color={this.props.details.color} members={this.props.members} boardName={this.props.boardName} groupI={this.props.index} removeItem={this.removeItem} />)
-            }
+                <th style={`width: 25%; min-width: 300px;`}>Task</th>
+                <th style={`width: 5%; min-width: 60px; max-width: 90px;`}>Made by</th>
+                <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p2</th>
+                <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p3</th>
+                <th style={`width: 5%; min-width: 35px; max-width: 60px;`}>p4</th>
+                <th style={`min-width: 130px;`}>Status</th>
+                <th style={`min-width: 100px;`}>Goal</th>
+                <th style={`min-width: 100px`}>Deadline</th>
+                <th style={`min-width: 100px;`}>Time used</th>
+                <th style={`width: 3%;`}>delete</th>
+              </tr>
+            </thead>
+            <tbody class={style.tableBody} style={`display: table-row-group;`}>
+              {
+                Object
+                  .keys(this.state.items)
+                  .map(key => <Item key={key} index={key} updateItem={this.updateItem} details={this.state.items[key]} teamname={this.props.teamname} color={this.props.details.color} members={this.props.members} boardName={this.props.boardName} groupI={this.props.index} removeItem={this.removeItem} />)
+              }
+            </tbody>
             <tr>
               <td colspan="5" class={style.tdAddItem}>
                 <AddItem addItem={this.addItem} />
@@ -148,7 +153,7 @@ export default class BoardGroup extends Component {
                     </div>
                   </div>
                   {this.state.displayColorPicker ? <div class={style.popover}>
-                    <div class={style.cover} onClick={this.handleColorClose} />
+                  <div class={style.cover} onClick={this.handleColorClose} />
                     <BlockPicker
                       width="auto"
                       triangle="hide"
@@ -163,8 +168,25 @@ export default class BoardGroup extends Component {
                 <button style={`width: 100%; display: flex; justify-content: center; background-color: #f44336;`} className={`mdc-button mdc-button--raised`} onClick={this.handleDeleteGroupItems}>Delete group</button>
               </td>
             </tr>
-          </tbody>
-        </table>
+          </table>
+        </MediaQuery>
+        <MediaQuery query="(max-width: 560px)">
+          <ul class={style.ulGroup}>
+            <li class={style.groupHeadMobile}>{details.name}</li>
+            <li class={style.taskWrapLi}>
+              <ul class={style.taskWrapUl}>
+                {
+                  Object
+                    .keys(this.state.items)
+                    .map(key => <MobileItem key={key} index={key} details={this.state.items[key]} color={this.props.details.color} teamname={this.props.teamname} boardname={this.props.boardName} groupname={this.props.index} />)
+                }
+              </ul>
+            </li>
+            <li class={style.createTask}>
+              <Link href={`/team/${this.props.teamname}/board/${this.props.boardName}/${this.props.index}/create`} addItem={this.addItem} >Create task<i class="material-icons">keyboard_arrow_right</i></Link>
+            </li>
+          </ul>
+        </MediaQuery>
       </div>
     );
   }

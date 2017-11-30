@@ -1,11 +1,20 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style';
+import Header from '../../components/header/index';
 
 export default class Home extends Component {
   render() {
     return (
       <div class={style.home}>
+        <Header
+          uid={this.props.uid}
+          username={this.props.username}
+          userProfilePic={this.props.userProfilePic}
+          logout={this.props.logout}
+          hidden={this.props.hidden}
+          title={this.props.title}
+        />
         <div class={style.main}>
           <div class={style.maindesc}>
             <h1 class={style.homeH1}>Project management <br />reinvented.</h1>

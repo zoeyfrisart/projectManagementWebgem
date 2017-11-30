@@ -1,17 +1,16 @@
 /* https://material.io/color/#!/?view.left=0&view.right=0&primary.color=F5F5F5&secondary.color=D81B60 */
 .sidebar{
-  width: 25vw;
-  min-height: calc(100vh - 50px);
-  max-width: 250px;
   background: #f5f5f5;
-  padding: 0;
-  /* padding-top: 1px; */
-  margin: 0;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  z-index: 2;
-  position: fixed;
   left: 0;
-  top: 50px
+  margin: 0;
+  max-width: 250px;
+  min-height: calc(100vh - 50px);
+  padding: 0;
+  position: fixed;
+  top: 50px;
+  width: 25vw;
+  z-index: 2;
 }
 
 .sidebar nav{
@@ -21,10 +20,9 @@
 
 .sidebar nav a{
   color: #222;
+  margin: 0;
   padding: 12.5px 25px;
   text-decoration: none;
-  margin: 0;
-  /* flex: 3; */
 }
 
 .sidebar nav a:hover,
@@ -41,10 +39,10 @@
 }
 
 .boardLinkHeader {
-  padding: 10px 0 5px 15px;
-  margin: 0;
   font-weight: 700;
   font-size: 1.5em;
+  margin: 0;
+  padding: 10px 0 5px 15px;
 }
 
 .boardLinkWrapper{
@@ -55,25 +53,30 @@
 }
 
 nav .boardLinkWrapper a{
-  /* padding: 10px 35px; */
-  flex: 4 0 90%;
   height: 100%;
+  flex: 4 0 90%;
 }
 
 nav .boardLinkWrapper a:nth-child(2){
-  padding: 0;
-  flex: 1 2 5%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex: 1 2 5%;
+  justify-content: center;
+  padding: 0;
 }
 
 .warningPerm{
-  padding: 25px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
+  bottom: 0;
+  color: #721c24;
+  padding: 25px;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 560px){
+  .sidebar{
+    display: none;
+  }
 }

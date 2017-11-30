@@ -142,3 +142,5 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
+
+// Check if i'm even using this code

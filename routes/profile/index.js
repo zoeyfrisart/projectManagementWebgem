@@ -2,6 +2,8 @@ import { h, Component } from 'preact';
 import style from './style';
 import base from '../../base';
 
+import Header from '../../components/header/index';
+
 export default class Profile extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +34,15 @@ export default class Profile extends Component {
   render({ user }) {
     return (
       <div class={style.profile}>
+        <Header
+          uid={this.props.uid}
+          username={this.props.username}
+          userProfilePic={this.props.userProfilePic}
+          logout={this.props.logout}
+          hidden={this.props.hidden}
+          title={this.props.title}
+          toSpecial={this.props.toSpecial}
+        />
         {/* <header class={style.profileHeader} role="banner" /> */}
         <div class={style.profileWrap}>
           <div class={style.profileDesc}>

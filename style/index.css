@@ -3,22 +3,23 @@
 /* updated Color theme: https://material.io/color/#!/?view.left=0&view.right=0&primary.color=673AB7&secondary.color=F44336&secondary.text.color=FAFAFA */
 :root{
   --mdc-theme-primary: #9c27b0;
+  --mdc-theme-background: #fafafa;
+  --mdc-theme-secondary: #f44336;
   --theme-primary--light: #9a67ea;
   --theme-primary--dark: #320b86;
-  --mdc-theme-secondary: #f44336;
   --theme-secondary--light: #ff7961;
   --theme-secondary--dark: #ba000d;
-  --mdc-theme-background: #fafafa;
 }
+
 html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
   background: #FAFAFA;
+  color: #444;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #444;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

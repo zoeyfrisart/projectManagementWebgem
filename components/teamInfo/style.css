@@ -3,5 +3,27 @@
 }
 
 .team{
+  margin: 0;
   padding: 15px;
+}
+.content{
+  width: 100%;
+}
+
+@media (max-width: 560px){
+  .team{
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  .team .headWrap{
+    display: none;
+  }
+
+  .team .content > div{
+    margin: 7.5px 0;
+    min-width: 0;
+    width: 100%;
+  }
 }

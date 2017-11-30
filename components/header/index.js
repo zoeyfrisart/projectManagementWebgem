@@ -9,6 +9,20 @@ export default class Header extends Component {
   constructor() {
     super();
     this.renderLoggedInNav = this.renderLoggedInNav.bind(this);
+    this.getUrl = this.getUrl.bind(this);
+  }
+
+  getUrl() {
+    if (!this.props.toSpecial && this.props.to) {
+      const curUrl = this.props.to;
+      const length = this.props.routLength - 2;
+      const strippedUrl = curUrl.splice(0, length);
+      const newUrl = strippedUrl.join('/');
+      return newUrl;
+    }
+    else {
+      return this.props.toSpecial;
+    }
   }
 
   renderLoggedInNav() {
@@ -16,7 +30,8 @@ export default class Header extends Component {
       <div class={style.headWrap}>
         <Link class={style.logo} aria-label="start page" href="/"><img src={logo} alt={logo} /></Link>
         <nav>
-          <Link href="/teams">my teams</Link>
+          <Link class={style.backArrow} href={this.getUrl()}><i class="material-icons" style={this.props.hidden}>keyboard_arrow_left</i></Link>
+          <span>{this.props.title}</span>
           <UserMenu
             username={this.props.username}
             userProfilePic={this.props.userProfilePic}
@@ -36,7 +51,8 @@ export default class Header extends Component {
       <header class={style.header}>
         <div class={style.headWrap}>
           <nav>
-            <Link activeClassName={style.active} href="/">start</Link>
+            <Link class={style.backArrow} href={this.getUrl()}><i class="material-icons" style={this.props.hidden}>keyboard_arrow_left</i></Link>
+            <span>{this.props.title}</span>
             <Link activeClassName={style.active} href="/login">login</Link>
           </nav>
         </div>

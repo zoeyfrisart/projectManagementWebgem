@@ -1,27 +1,27 @@
 .cardWrap{
   display: inline-block;
-  width: 20%;
-  min-width: 300px;
   margin: 10px 5px;
+  min-width: 300px;
+  width: 20%;
 }
 
 .cardWrap h1{
+  color: white;
   font-size: 25px;
   text-transform: uppercase;
-  color: white;
 }
 
 .cardBackcolor{
+  align-items: center;
   background: #333;
   color: white;
-  margin-left: -16px;
-  margin-top: -16px;
-  margin-right: -16px;
-  margin-bottom: -16px;
-  height: 175px;
   display: flex;
+  height: 175px;
   justify-content: center;
-  align-items: center;
+  margin-bottom: -16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-top: -16px;
   padding: 16px;
 }
 
@@ -30,9 +30,8 @@
 }
 
 .linkCard{
-  width: 100%;
-  width: calc(50% - 8px);
   margin-right: 8px;
+  width: calc(50% - 8px);
 }
 
 /* fix the button margin */
