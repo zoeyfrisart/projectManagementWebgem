@@ -1,14 +1,6 @@
-nav a.activeBoard {
-  background: #9a67ea;
-  color: #ffffff;
-}
-
-nav .boardLinkWrapper a.activeBoard {
-  background: #9a67ea;
-  color: #ffffff;
-}
-
-nav a.activeBoard + a{
+nav a.activeBoard,
+nav .boardLinkWrapper a.activeBoard,
+nav a.activeBoard + a {
   background: #9a67ea;
   color: #ffffff;
 }

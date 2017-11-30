@@ -1,43 +1,42 @@
 .itemOverview{
   display: block;
   margin: 0;
-  padding: 0;
   padding: 0 29px;
 }
 
 .itemOverview > div{
   border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
-  padding: 15px 0;
-  display: block;
   box-sizing: border-box;
+  display: block;
+  padding: 15px 0;
 }
 
 .itemOverview > div > span{
   color: #000000;
-  opacity: 0.3;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 12px;
   display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
   margin: 0;
+  opacity: 0.3;
   padding: 0;
 }
 
 .itemOverview > div > p{
-  opacity: 0.75;
   color: rgba(0,0,0,0.9);
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
   margin: 0;
+  opacity: 0.75;
   padding: 0;
 }
 
 .itemOverview .desc{
   background-color: rgba(29,29,38,0.03);
+  border-bottom: 0;
   margin: 0 -29px;
   padding: 15px 29px;
-  border-bottom: 0;
 }
 
 .itemOverview .desc p{
@@ -49,24 +48,24 @@
 }
 
 .itemOverview .assigned img{
-  height: 23px;
-  width: 23px;
   border-radius: 100%;
+  height: 23px;
   margin: 5px 2.5px 0 0;
+  width: 23px;
 }
 
 .itemOverview .assigned section{
-  position: relative;
   display: block;
+  position: relative;
 }
 
 .itemOverview .assigned section i{
+  font-size: 0.9em;
+  opacity: 0.25;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.25;
-  font-size: 0.9em;
 }
 
 .itemOverview .assigned img:last-of-type{
@@ -74,60 +73,59 @@
 }
 
 .itemOverview .status select{
+  background: none;
+  border: 0;
+  border-bottom: 2px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+  border-radius: 0;
   color: rgba(0,0,0,0.9);
-  opacity: 0.75;
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
   margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  border-radius: 0;
-  background: none;
-  border-bottom: 2px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+  opacity: 0.75;
+  outline: 0;
   padding: 5px 0 2.5px;
-  display: block;
   width: 100%;
 }
 
 .itemOverview .timeField{
-  display: inline-block;
-  width: calc(50% - 5px);
-  margin-right: 5px;
   box-sizing: border-box;
+  display: inline-block;
+  margin-right: 5px;
+  width: calc(50% - 5px);
 }
 
 .itemOverview .timeField input{
   background: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  opacity: 0.75;
+  border: 0;
   color: rgba(0,0,0,0.9);
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
   margin: 0;
+  opacity: 0.75;
+  outline: 0;
+  padding: 0;
 }
 
 .itemOverview .deadline{
-  display: inline-block;
-  width: calc(50% - 5px);
   box-sizing: border-box;
+  display: inline-block;
   margin-left: 5px;
+  width: calc(50% - 5px);
 }
 
 .itemOverview .deadline input{
   background: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  opacity: 0.75;
+  border: 0;
   color: rgba(0,0,0,0.9);
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
+  padding: 0;
+  opacity: 0.75;
+  outline: 0;
   margin: 0;
 }
 
@@ -142,92 +140,91 @@
 
 .itemOverview .timeUsed input{
   background: none;
-  padding: 0;
-  border: none;
-  outline: none;
-  opacity: 0.75;
+  border: 0;
   color: rgba(0,0,0,0.9);
+  display: inline-block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
   margin: 0;
-  display: inline-block;
+  opacity: 0.75;
+  outline: 0;
+  padding: 0;
   width: 100%;
 }
 
 .edit{
-  display: inline-block;
-  width: calc(50% - 10px);
-  margin-right: 10px;
-  box-sizing: border-box;
   border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
-  padding: 15px 0;
+  box-sizing: border-box;
   color: rgba(25,192,98,0.9);
+  display: inline-block;
   font-size: 14px;
   margin-bottom: 5px;
+  margin-right: 10px;
+  padding: 15px 0;
+  width: calc(50% - 10px);
 }
 
 .remove{
-  display: inline-block;
-  width: calc(50% - 10px);
-  margin-left: 10px;
-  box-sizing: border-box;
   border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
-  padding: 15px 0;
+  box-sizing: border-box;
   color: rgba(216,44,74,0.9);
+  display: inline-block;
   font-size: 14px;
   margin-bottom: 5px;
+  margin-left: 10px;
+  padding: 15px 0;
   text-decoration: none;
+  width: calc(50% - 10px);
 }
 
 .itemOverview .assigned .assignPeople {
   display: block;
-  overflow: hidden;
   height: auto;
   max-height: 0;
+  overflow: hidden;
   transition: all .4s ease-in-out;
 }
 
 .itemOverview .assigned .assignPeople label{
-  display: block;
-  opacity: 0.75;
   color: rgba(0,0,0,0.9);
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
   margin: 0;
+  opacity: 0.75;
   padding: 5px 0 0;
 }
 
 .itemOverview .assigned .assignPeople select{
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 5px;
+  background: none;
   border: 0;
   border-bottom: 2px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
-  background: none;
   border-radius: 0;
-  padding: 5px 0 2.5px;
   color: rgba(0,0,0,0.9);
+  display: inline-block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
+  margin-bottom: 5px;
+  padding: 5px 0 2.5px;
+  width: 100%;
 }
 
 .itemOverview .notes textarea{
-  display: block;
-  resize: none;
-  width: 100%;
   background: none;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  padding: 5px 0 2.5px;
+  border: 0;
   color: rgba(0,0,0,0.9);
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
+  margin: 0;
+  outline: 0;
+  padding: 5px 0 2.5px;
+  resize: none;
+  width: 100%;
 }
 
 .itemOverview .notes textarea::placeholder{
@@ -235,19 +232,18 @@
 }
 
 .itemOverview .desc textarea{
-  display: block;
-  resize: none;
-  width: 100%;
   background: none;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  padding: 5px 0 2.5px;
+  border: 0;
   color: rgba(0,0,0,0.9);
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
+  margin: 0;
+  outline: 0;
+  padding: 5px 0 2.5px;
+  resize: none;
+  width: 100%;
 }
 
 .itemOverview .desc textarea::placeholder{
@@ -264,8 +260,8 @@
 
 .noPerm{
   display: block;
-  padding: 15px 29px;
   margin: 0;
+  padding: 15px 29px;
 }
 
 .noPerm h2{
@@ -277,20 +273,20 @@
 
 .noPerm p{
   color: #000000;
-  opacity: 0.75;
   font-size: 16px;
   margin: 0;
+  opacity: 0.75;
   padding: 0;
 }
 
 .noPerm a{
   display: block;
-  width: 100%;
-  box-sizing: border-box;
   border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
-  padding: 15px 0;
+  box-sizing: border-box;
   color: rgba(216,44,74,0.9);
   font-size: 14px;
   margin-bottom: 5px;
+  padding: 15px 0;
   text-decoration: none;
+  width: 100%;
 }

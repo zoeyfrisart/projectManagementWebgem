@@ -1,7 +1,7 @@
 .board{
-  width: calc(100% - 250px);
   height: auto;
   max-height: calc(100vh - 50px);
+  width: calc(100% - 250px);
 }
 
 .board::-webkit-scrollbar{
@@ -9,15 +9,15 @@
 }
 
 .boardGroupWrapper{
-  width: 100%;
   display: block;
   height: auto;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 @media (max-width: 560px){
   .board{
-    width: 100%;
     max-height: auto;
+    width: 100%;
   }
 }

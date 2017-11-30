@@ -1,24 +1,24 @@
 /* https://material.io/color/#!/?view.left=0&view.right=0&primary.color=F5F5F5&secondary.color=D81B60 */
 .header {
-  position: fixed;
+  background: #9c27b0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  color: white;
+  display: flex;
+  height: 50px;
   left: 0;
+  padding: 0;
+  position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
-  padding: 0;
-  background: #9c27b0;
-  color: white;
   z-index: 50;
-  display: flex;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .headWrap{
-  height: 100%;
   display: block;
-  width: 100%;
-  position: relative;
   flex: 1 1 75%;
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .headWrap nav {
@@ -27,34 +27,30 @@
 }
 
 .headWrap nav a {
+  background: rgba(255,255,255,0);
+  color: #fff;
   display: inline-block;
   height: 50px;
   line-height: 50px;
-  padding: 0 15px;
   min-width: 50px;
+  padding: 0 15px;
   text-align: center;
-  background: rgba(255,255,255,0);
   text-decoration: none;
-  color: #fff;
   vertical-align: top;
 }
 
 .headWrap a.logo{
-  width: 200px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
+  display: inline-flex;
   height: 100%;
+  justify-content: center;
   padding: 0 15px;
+  width: 200px;
 }
 
 .headWrap a.logo img{
   width: 100%;
 }
-
-/* .headWrap nav a div{
-  width: 100%;
-} */
 
 .headWrap nav a.boooooooi {
   padding: 0;
@@ -73,13 +69,13 @@
 }
 
 .headWrap nav a div div ul a p{
-  padding-left: 15px;
   margin: 10px 0;
+  padding-left: 15px;
 }
 
 .headWrap nav a div div ul li{
-  transition: all .3s ease;
   background: #fff;
+  transition: all .3s ease;
 }
 
 .headWrap nav a div div ul li:hover{
@@ -98,33 +94,28 @@
 }
 
 .headWrap nav a div div ul a{
-  position: relative;
-  padding: 0 16px;
-  margin: 0;
-  outline: none;
-  color: inherit;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: Roboto, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 1.75rem;
-  text-decoration: inherit;
-  text-transform: inherit;
+  align-items: center;
+  background: #fff;
   color: rgb(0,0,0);
   display: flex;
-  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   height: 100%;
-  align-items: center;
+  letter-spacing: 0.04em;
+  line-height: 1.75rem;
+  margin: 0;
+  outline: none;
+  padding: 0 16px;
   pointer-events: all;
+  position: relative;
+  text-decoration: none;
+  text-transform: inherit;
   transition: all .3s ease;
-  background: #fff;
+  user-select: none;
+  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .headWrap nav a div div ul a:hover{
@@ -142,15 +133,15 @@
   }
 
   .headWrap nav{
-    float: none;
     display: flex;
-    width: 100%;
+    float: none;
     justify-content: space-between;
+    width: 100%;
   }
 
   .headWrap nav a.backArrow{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
 
@@ -159,14 +150,13 @@
   }
 
   .headWrap nav span{
-    font-size: 1em;
-    display: flex;
     align-items: center;
     color: #FFFFFF;
+    display: flex;
     font-family: 'Open Sans', sans-serif;
+    line-height: 19px;
     font-size: 14px;
     font-weight: 300;
-    line-height: 19px;
     text-align: center;
   }
 }

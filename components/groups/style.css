@@ -1,7 +1,7 @@
 .groupWrap{
-  width: 100%;
   padding: 15px;
   position: relative;
+  width: 100%;
 }
 
 @media (max-width: 560px){
@@ -11,14 +11,13 @@
 }
 
 .deleteItem{
-  position: absolute;
-  right: 2px;
-  display: none;
   background:none;
-  border: none;
-  outline: none;
   border: 1px solid #cecece;
   border-radius: 3px;
+  display: none;
+  outline: 0;
+  position: absolute;
+  right: 2px;
 }
 
 .groupWrap:hover .deleteItem{
@@ -26,34 +25,30 @@
 }
 
 .group{
-  width: 100%;
-  display: table;
-  padding: 3px;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+  display: table;
+  padding: 3px;
+  width: 100%;
 }
 
 .group thead{
-  width: 100%;
-  padding: 2px 0 6px 7.5px;
   display: block;
+  padding: 2px 0 6px 7.5px;
+  width: 100%;
 }
 
 .group thead tr{
   display: table-row;
-  /* width: 100%; */
 }
 
 .group thead th{
-  text-align: center;
-  text-overflow: ellipsis;
-  /* overflow: hidden; */
-  white-space: nowrap;
+  display: table-cell;
   font-size: 13px;
   font-weight: 300;
-  /* margin: 0 1px; */
-  /* padding: 0 0px; */
-  display: table-cell;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 10%;
 }
 
@@ -63,14 +58,13 @@
 
 .inputHeader{
   background: none;
-  border: none;
-  outline: none;
-  text-align: left;
-  font-size: 18px;
-  width: 100%;
-  min-width: 300px;
-  margin: 0 1px 0 0;
   border: 0.5px dotted transparent;
+  font-size: 18px;
+  margin: 0 1px 0 0;
+  min-width: 300px;
+  outline: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .inputHeader:focus{
@@ -78,49 +72,48 @@
 }
 
 .color {
-  height: 36px;
-  border-radius: 2px;
   background: deeppink;
-  width: 100%;
+  border-radius: 2px;
   display: block;
+  height: 36px;
+  width: 100%;
 }
 
 .swatch {
-  padding: 0px;
   background: #fff;
   border-radius: 2px;
-  /* box-shadow: 0 0 0 1px rgba(0,0,0,.1); */
-  cursor: pointer;
-  color: white;
-  display: block;
-  text-align: center;
-  line-height: 35px;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  color: white;
+  cursor: pointer;
+  display: block;
+  line-height: 35px;
+  padding: 0px;
+  text-align: center;
 }
 
 .popover {
-  position: absolute;
-  z-index: 2;
-  top: 40px;
-  left: 0;
   border-radius: 6px;
-  width: 100%;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  z-index: 2;
 }
 
 .cover {
+  bottom: 0;
+  left: 0;
   position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  right: 0;
+  top: 0;
 }
 
 .wrapColor{
   display: inline-block;
+  margin-left: 0;
   position: relative;
   width: 100%;
-  margin-left: 0px;
 }
 
 .tdAddItem{
@@ -155,51 +148,51 @@ ul{
 }
 
 .groupHeadMobile{
-  background-color: rgba(29,29,38,0.04);
-  height: 50px;
-  display: flex;
   align-items: center;
-  padding: 0 27px 0 27px;
+  background-color: rgba(29,29,38,0.04);
+  border-left: 4px solid rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  display: flex;
+  color: rgba(11.4%, 11.4%, 14.9%, 0.459);
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: rgba(11.4%, 11.4%, 14.9%, 0.459);
-  border-left: 4px solid rgba(0,0,0,0.2);
-  box-sizing: border-box;
-  max-width: 100vw;
+  height: 50px;
   margin: 0;
+  max-width: 100vw;
+  padding: 0 27px 0 27px;
 }
 
 .createTask{
-  display: block;
-  max-width: 100vw;
-  padding: 0 27px 0 27px;
-  box-sizing: border-box;
   background-color: rgba(182,182,182,0.07);
   border-left: 4px solid rgba(226,68,92,0.6);
+  box-sizing: border-box;
+  display: block;
   margin: 0;
+  max-width: 100vw;
+  padding: 0 27px;
 }
 
 .createTask a{
   color: rgba(0%, 0%, 0%, 0.459);
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  text-decoration: none;
-  padding: 12px 0;
   display: block;
-  overflow: hidden;
-  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
   margin: 0;
+  overflow: hidden;
+  padding: 12px 0;
+  position: relative;
+  text-decoration: none;
 }
 
 .createTask a i{
+  margin: 0;
+  opacity: 0.50;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  opacity: 0.50;
-  margin: 0;
 }
 
 .ulGroup{
