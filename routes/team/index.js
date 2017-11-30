@@ -6,6 +6,10 @@ import base from '../../base';
 import { Router, route } from 'preact-router';
 import Board from '../board/index';
 import TeamInfo from '../../components/teamInfo/index';
+import ItemOverview from '../itemOverview/index';
+import EditItem from '../editItem/index';
+import Header from '../../components/header/index';
+import CreateTask from '../createTask/index';
 // import BoardLink from '../../components/boardLink/index';
 // import {PropTypes} from 'preact-compat';
 
@@ -72,6 +76,17 @@ export default class Team extends Component {
   render({ teamName }, { boards, members, user }) {
     return (
       <div class={style.team}>
+        <Header
+          uid={this.props.uid}
+          username={this.props.username}
+          userProfilePic={this.props.userProfilePic}
+          logout={this.props.logout}
+          to={Router.getCurrentUrl().split("/")}
+          toSpecial={this.props.toSpecial}
+          routLength={Router.getCurrentUrl().split("/").length}
+          hidden={this.props.hidden}
+          title={this.props.title}
+        />
         <div class={style.hiddenSide} />
         <Sidenav
           addBoard={this.addBoard}
@@ -84,6 +99,9 @@ export default class Team extends Component {
         <Router onChange={this.handleRoute}>
           <TeamInfo exactly path="/team/:teamname" members={this.state.members} boards={this.state.boards} />
           <Board key={this.state.key} excactly path="/team/:teamname/board/:boardName" members={this.state.members} />
+          <ItemOverview excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex" uid={this.props.uid} members={this.state.members}/>
+          <EditItem excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex/edit" uid={this.props.uid} members={this.state.members} />
+          <CreateTask excactly path="/team/:teamname/board/:boardName/:groupIndex/create" uid={this.props.uid} members={this.state.members} />
         </Router>
       </div>
     );

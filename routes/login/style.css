@@ -218,3 +218,32 @@ button.loginBut{
   padding: 10px;
   padding-right: 20px;
 }
+
+/* Mobile Login */
+@media (max-width: 560px){
+  .login{
+    display: block;
+    background: #fafafa;
+    height: 100%;
+    box-shadow: none;
+    width: 100%;
+    min-width: 300px;
+  }
+  .loginhalf{
+    display: block;
+    width: 100%;
+    margin-top: 150px;
+    background: #fafafa;
+    height: 100%;
+  }
+  .signup{
+    display: none;
+  }
+
+  .loginWrap{
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+  }
+}

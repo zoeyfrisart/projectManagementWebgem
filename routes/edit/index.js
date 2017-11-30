@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 import base from '../../base';
+import Header from '../../components/header/index';
 
 export default class Edit extends Component {
   constructor(props) {
@@ -46,6 +47,15 @@ export default class Edit extends Component {
   render({ user }) {
     return (
       <div class={style.profile}>
+        <Header
+          uid={this.props.uid}
+          username={this.props.username}
+          userProfilePic={this.props.userProfilePic}
+          logout={this.props.logout}
+          hidden={this.props.hidden}
+          title={this.props.title}
+          toSpecial={this.props.toSpecial}
+        />
         <div class={style.profileWrap}>
           <div class={style.profileDesc}>
             <div class={style.inputGroup}>

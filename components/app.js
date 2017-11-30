@@ -15,6 +15,8 @@ import fireApp from '../base2';
 import Edit from '../routes/edit/index';
 import Settings from '../routes/settings/index';
 
+import MediaQuery from 'react-responsive';
+
 const github = new firebase.auth.GithubAuthProvider();
 github.addScope('user:email');
 
@@ -108,35 +110,135 @@ export default class App extends Component {
   render() {
     return (
       <div id="app">
-        <Header
-          uid={this.state.uid}
-          username={this.state.username}
-          userProfilePic={this.state.userProfilePic}
-          logout={this.logout}
-        />
-        <Router onChange={this.handleRoute}>
-          <Home path="/" />
-          <Profile path="/profile/" user="me" />
-          <Profile path="/profile/:user"
+        {/* <MediaQuery query="(min-width: 561px)">
+          <Header
             uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
           />
-          <Team path="/team/" teamName="test" />
-          <Team path="/team/:teamName" uid={this.state.uid} />
-          <Team path="/team/:teamName/board/:boardName" uid={this.state.uid} />
+        </MediaQuery> */}
+        <Router onChange={this.handleRoute}>
+          <Home
+            path="/"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            hidden="display: none;"
+          />
+          <Profile
+            path="/profile/"
+            user="me"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            toSpecial="/"
+            title="Profile"
+          />
+          <Profile
+            path="/profile/:user"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            toSpecial="/"
+            title="Profile"
+          />
+          <Team
+            path="/team/"
+            teamName="test"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+          />
+          <Team
+            path="/team/:teamName"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            toSpecial="/teams/"
+            title="Team"
+          />
+          <Team
+            path="/team/:teamName/board/:boardName"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            title="Board"
+          />
+          <Team
+            path="/team/:teamName/board/:boardName/:groupIndex/:itemIndex"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/team/:teamName/board/:boardName"
+            title="Task"
+          />
+          <Team
+            path="/team/:teamName/board/:boardName/:groupIndex/create"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/team/:teamName/board/:boardName"
+            title="Create task"
+          />
+          <Team
+            excactly
+            path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex/edit"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            hidden="display: none;"
+            to="/team/:teamname/board/:boardName/:groupIndex/:itemIndex"
+            title="Edit task"
+          />
           <Login path="/login"
             authenticate={this.authenticate}
             twitter={twitter}
             facebook={facebook}
             github={github}
             uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            toSpecial="/"
+            title="Login"
           />
           <Edit path="/profile/:user/edit"
             uid={this.state.uid}
+            toSpecial={`/profile/${this.state.uid}`}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            title="Edit profile"
           />
           <Settings path="/settings"
             uid={this.state.uid}
           />
-          <Teams path="/teams" uuid={this.state.uid} />
+          <Teams
+            path="/teams"
+            uuid={this.state.uid}
+            uidHead={this.state.uid}
+            usernameHead={this.state.username}
+            userProfilePicHead={this.state.userProfilePic}
+            logoutHead={this.logout}
+            toSpecialHead="/"
+            titleHead="Teams"
+          />
         </Router>
         <NotifyChange />
       </div>

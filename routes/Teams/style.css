@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+@media (max-width: 560px){
+  .content h2{
+    display: none;
+  }
+}
+
 .teamsContent{
   display: flex;
   justify-content: space-around;

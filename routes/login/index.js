@@ -3,11 +3,21 @@ import Redirect from '../../components/Redirect';
 import style from './style';
 
 import webgemLogo from '../../assets/img/logo_webgem.svg';
+import Header from '../../components/header/index';
 
 export default class Login extends Component {
   renderLogin() {
     return (
       <div class={style.loginWrap}>
+        <Header
+          uid={this.props.uid}
+          username={this.props.username}
+          userProfilePic={this.props.userProfilePic}
+          logout={this.props.logout}
+          hidden={this.props.hidden}
+          title={this.props.title}
+          toSpecial={this.props.toSpecial}
+        />
         <div class={style.login}>
           <div class={style.signup}>
             <div class={style.backgroundGradient} />

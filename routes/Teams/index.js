@@ -3,6 +3,7 @@ import style from './style';
 import base from '../../base';
 import TeamCard from '../../components/teamCard';
 import CreateTeam from '../../components/createTeam';
+import Header from '../../components/header/index';
 
 export default class Teams extends Component {
   constructor() {
@@ -54,6 +55,15 @@ export default class Teams extends Component {
   render() {
     return (
       <div class={style.content}>
+        <Header
+          uid={this.props.uidHead}
+          username={this.props.usernameHead}
+          userProfilePic={this.props.userProfilePicHead}
+          logout={this.props.logoutHead}
+          hidden={this.props.hiddenHead}
+          title={this.props.titleHead}
+          toSpecial={this.props.toSpecialHead}
+        />
         <h2>teams</h2>
         <div class={style.teamsContent}>
           {

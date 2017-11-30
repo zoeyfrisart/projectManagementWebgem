@@ -15,7 +15,8 @@
 
 .headWrap{
   height: 100%;
-  display: inline-block;
+  display: block;
+  width: 100%;
   position: relative;
   flex: 1 1 75%;
 }
@@ -131,3 +132,50 @@
   color: rgb(0,0,0);
 }
 
+@media (max-width: 560px){
+  .headWrap{
+    display: block;
+    width: 100%;
+  }
+  .headWrap a.logo{
+    display: none;
+  }
+
+  .headWrap nav{
+    float: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .headWrap nav a.backArrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headWrap nav a.backArrow i{
+    font-size: 40px;
+  }
+
+  .headWrap nav span{
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 561px){
+  .headWrap nav a.backArrow{
+    display: none;
+  }
+  .headWrap nav span{
+    display: none;
+  }
+}

@@ -4,4 +4,29 @@
 
 .team{
   padding: 15px;
+  /* width: 100%; */
+  /* display: block; */
+  /* box-sizing: border-box; */
+  margin: 0;
+}
+.content{
+  width: 100%;
+}
+
+@media (max-width: 560px){
+  .team{
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .team .headWrap{
+    display: none;
+  }
+
+  .team .content > div{
+    margin: 7.5px 0;
+    width: 100%;
+    min-width: 0;
+  }
 }

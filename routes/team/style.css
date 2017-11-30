@@ -35,3 +35,9 @@
   left: 0;
   top: 50px
 }
+
+@media (max-width: 560px){
+  .hiddenSide{
+    display: none;
+  }
+}

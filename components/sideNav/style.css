@@ -77,3 +77,9 @@ nav .boardLinkWrapper a:nth-child(2){
   background-color: #f8d7da;
   border-color: #f5c6cb;
 }
+
+@media (max-width: 560px){
+  .sidebar{
+    display: none;
+  }
+}
