@@ -10,6 +10,7 @@ import ItemOverview from '../itemOverview/index';
 import EditItem from '../editItem/index';
 import Header from '../../components/header/index';
 import CreateTask from '../createTask/index';
+import CreateGroup from '../createGroup/index';
 // import BoardLink from '../../components/boardLink/index';
 // import {PropTypes} from 'preact-compat';
 
@@ -102,6 +103,7 @@ export default class Team extends Component {
           <ItemOverview excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex" uid={this.props.uid} members={this.state.members}/>
           <EditItem excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex/edit" uid={this.props.uid} members={this.state.members} />
           <CreateTask excactly path="/team/:teamname/board/:boardName/:groupIndex/create" uid={this.props.uid} members={this.state.members} />
+          <CreateGroup excactly path="/team/:teamname/board/:boardName/create-group" uid={this.props.uid} members={this.state.members} />
         </Router>
       </div>
     );

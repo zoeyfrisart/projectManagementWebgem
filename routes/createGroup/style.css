@@ -1,0 +1,99 @@
+.newGroup{
+  display: block;
+  margin: 0;
+}
+
+.newGroupForm{
+  display: block;
+  margin: 0;
+  padding: 10px 29px;
+}
+
+.newGroupForm label{
+  color: #000000;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.3;
+  padding: 0;
+}
+
+.newGroupForm input{
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+  box-sizing: border-box;
+  color: rgba(0,0,0,0.9);
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.75;
+  outline: 0;
+  padding: 2.5px 0 15px;
+  transition: all .3s ease;
+  width: 100%;
+}
+
+.newGroupForm input:focus{
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.newGroupForm .wrapColor{
+  display: block;
+}
+
+.wrapColor .swatch{
+  display: block;
+}
+
+.swatch .color{
+  --selectedColor: '#F47373';
+  border-bottom: 1px solid var(--selectedColor);
+  color: var(--selectedColor);
+  display: block;
+  margin-bottom: 2.5px;
+  padding: 2.5px 0 15px;
+}
+
+.newGroupForm .groupColorLabel{
+  color: #000000;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.3;
+  padding: 5px 0 0;
+}
+
+.newGroupForm .createSubmit{
+  border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: rgba(25,192,98,0.9);
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  opacity: 1;
+  padding: 15px 0;
+  width: calc(50% - 10px);
+}
+
+.cancel{
+  border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: rgba(216,44,74,0.9);
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding: 16px 0 15px;
+  text-decoration: none;
+  width: calc(50% - 10px);
+}

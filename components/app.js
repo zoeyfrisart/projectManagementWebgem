@@ -194,6 +194,15 @@ export default class App extends Component {
             title="Create task"
           />
           <Team
+            path="/team/:teamName/board/:boardName/create-group"
+            uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/team/:teamName/board/:boardName"
+            title="Create group"
+          />
+          <Team
             excactly
             path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex/edit"
             uid={this.state.uid}

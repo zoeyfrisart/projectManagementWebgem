@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { BlockPicker } from 'react-color';
-import Textfield from 'preact-material-components/Textfield';
 import 'preact-material-components/Textfield/style.css';
 import style from './style';
 
@@ -9,10 +8,6 @@ export default class NewGroup extends Component {
     displayColorPicker: false,
     color: '#f47373'
   }
-
-  // handleTest = (event) => {
-  //   console.log(this.value);
-  // }
 
   createGroup(event) {
     event.preventDefault();
