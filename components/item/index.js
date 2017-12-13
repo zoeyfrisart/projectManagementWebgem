@@ -4,13 +4,21 @@ import SelectPerson from '../selectPerson';
 import SelectStatus from '../selectStatus';
 import moment from 'moment';
 
+import { getColor, getPrioColor, getImgSrc } from '../../helpers';
+
 import trashIcon from '../../assets/img/trash-alt.svg';
 
+
+
 export default class Item extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.checkIfPast = this.checkIfPast.bind(this);
+    this.checkIfAssigned = this.checkIfAssigned.bind(this);
+    // this.StatusStyleMinal = this.StatusStyleMinal.bind(this);
+    // this.PriorityStyleMinal = this.PriorityStyleMinal.bind(this);
+
   }
   handleChange(e, key) {
     const item = this.props.details;
@@ -35,12 +43,30 @@ export default class Item extends Component {
     return timeAg;
   }
 
+  checkIfAssigned(personI) {
+    if (personI === 'none') {
+      return false;
+    }
+    return <img src={getImgSrc(personI)} alt="Assigned person profile pic" />;
+  }
 
   render() {
     const details = this.props.details;
     const index = this.props.index;
+    const userStyle = this.props.settings.style;
+
+    let statusStyle = null;
+    let priorityStyle = null;
+    if (userStyle){
+      statusStyle = <StatusStyleMinal details={details} />;
+      priorityStyle = <PriorityStyleMinal details={details} />;
+    }
+    else {
+      statusStyle = <StatusStyleVisual details={details} />;
+      priorityStyle = <PriorityStyleVisual details={details} />;
+    }
     return (
-      <tr class={style.tableRow}>
+      /*<tr class={style.tableRow}>
         <td style={`width: 25%; min-width: 300px;`}>
           <div class={style.innerWrap} style={`border-left: 3.5px solid ${this.props.color}`}>
             <div class={style.subRow}>
@@ -201,7 +227,47 @@ export default class Item extends Component {
             </button>
           </div>
         </td>
-      </tr>
+      </tr> */
+      <div class={style.itemWrap}>
+        <p class={style.description}>{details.desc}</p>
+        <div class={style.assigned} >
+          {this.checkIfAssigned(details.p1)}
+          {this.checkIfAssigned(details.p2)}
+          {this.checkIfAssigned(details.p3)}
+          {this.checkIfAssigned(details.p4)}
+        </div>
+        {statusStyle}
+        {priorityStyle}
+        <p class={style.deadline} >November 21, 2017</p>
+      </div>
     );
   }
+}
+
+function StatusStyleMinal(props){
+  return(
+    <p class={style.statusMinimal} style={`--statusColor: ${getColor(props.details.status)}`}>{props.details.status}</p>
+  );
+}
+
+function PriorityStyleMinal(props){
+  return(
+    <p class={style.priorityMinimal} style={`--priorityColor: ${getPrioColor(props.details.priority)}`}>{props.details.priority}</p>
+  );
+}
+
+function StatusStyleVisual(props){
+  return(
+    <div class={style.status} style={`--statusColor: ${getColor(props.details.status)}`}>
+      <p>{props.details.status}</p>
+    </div>
+  );
+}
+
+function PriorityStyleVisual(props){
+  return(
+    <div class={style.priority} style={`--priorityColor: ${getPrioColor(props.details.priority)}`} >
+      <p>{props.details.priority}</p>
+    </div>
+  );
 }

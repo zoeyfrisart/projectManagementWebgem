@@ -15,8 +15,8 @@ export default class Edit extends Component {
     };
   }
 
-  componentWillMount(nextProps) {
-    this.ref = base.syncState(`users/${this.props.uid}`, {
+  componentWillMount() {
+    this.ref = base.syncState(`users/${this.props.user}`, {
       context: this,
       state: 'user'
     });
@@ -119,7 +119,7 @@ export default class Edit extends Component {
             </div>
           </div>
           <div class={style.profilePicWrap}>
-            <img class={style.profilePic} src={this.state.user.profilePic} />
+            <img class={style.profilePic} src={this.state.user.profilePic} alt="Profile picture" />
           </div>
         </div>
       </div>

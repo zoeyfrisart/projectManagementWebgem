@@ -235,8 +235,13 @@ export default class App extends Component {
             to="/"
             title="Edit profile"
           />
-          <Settings path="/settings"
+          <Settings path="/:user/settings"
             uid={this.state.uid}
+            username={this.state.username}
+            userProfilePic={this.state.userProfilePic}
+            logout={this.logout}
+            to="/"
+            title="Settings"
           />
           <Teams
             path="/teams"

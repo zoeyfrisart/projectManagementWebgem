@@ -11,7 +11,8 @@ export default class AddItem extends Component{
       p2: `none`,
       p3: `none`,
       p4: `none`,
-      status: `To do`
+      status: `To do`,
+      priority: `Low`
     };
     this.props.addItem(item);
     this.addItemForm.reset();

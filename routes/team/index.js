@@ -99,7 +99,7 @@ export default class Team extends Component {
         />
         <Router onChange={this.handleRoute}>
           <TeamInfo exactly path="/team/:teamname" members={this.state.members} boards={this.state.boards} />
-          <Board key={this.state.key} excactly path="/team/:teamname/board/:boardName" members={this.state.members} />
+          <Board key={this.state.key} excactly path="/team/:teamname/board/:boardName" members={this.state.members} uid={this.props.uid} />
           <ItemOverview excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex" uid={this.props.uid} members={this.state.members}/>
           <EditItem excactly path="/team/:teamname/board/:boardName/:groupIndex/:itemIndex/edit" uid={this.props.uid} members={this.state.members} />
           <CreateTask excactly path="/team/:teamname/board/:boardName/:groupIndex/create" uid={this.props.uid} members={this.state.members} />

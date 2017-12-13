@@ -1,30 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 import { Link } from 'preact-router';
-
-function getColor(newValue) {
-  if (newValue === 'Done') {
-    return '#00c875';
-  }
-  else if (newValue === 'Ready for testing') {
-    return '#0086c0';
-  }
-  else if (newValue === 'Working on it') {
-    return '#fdab3d';
-  }
-  else if (newValue === 'Work needed (rejected)') {
-    return '#a25ddc';
-  }
-  else if (newValue === `Need help (I'm stuck)`) {
-    return '#e2445c';
-  }
-  else if (newValue === 'To do') {
-    return '#c4c4c4'
-  }
-  else if (newValue === 'Cancelled') {
-    return '#a00037'
-  }
-}
+import { getColor } from '../../helpers';
 
 export default class MobileItem extends Component {
   // constructor(props) {

@@ -4,7 +4,6 @@ import style from './style';
 import { Link } from 'preact-router';
 import BoardGroup from '../../components/groups';
 import NewGroup from '../../components/newGroup';
-import NewMobileGroup from '../../components/newGroupMobile';
 import StatusComp from '../../components/statusComp';
 import base from '../../base';
 import MediaQuery from 'react-responsive';
@@ -67,7 +66,7 @@ export default class Board extends Component {
           {
             Object
               .keys(this.state.groups)
-              .map(key => <BoardGroup key={key} index={key} details={this.state.groups[key]} teamname={teamname} boardName={this.props.boardName} addGroup={this.addGroup} updateGroup={this.updateGroup} removeGroup={this.removeGroup} members={this.props.members} />)
+              .map(key => <BoardGroup key={key} index={key} details={this.state.groups[key]} teamname={teamname} boardName={this.props.boardName} addGroup={this.addGroup} updateGroup={this.updateGroup} uid={this.props.uid} removeGroup={this.removeGroup} members={this.props.members} />)
           }
           <MediaQuery query="(min-width: 561px)">
             <NewGroup

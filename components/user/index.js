@@ -45,11 +45,11 @@ export default class UserMenu extends Component {
               <i className="material-icons">group_add</i>
               <p>add to team</p>
             </Link>
-            <li role="separator" class="mdc-list-divider" />
-            {/* <Link class={style.link} href={`/settings`}>
+            <Link class={style.link} href={`/${this.props.uid}/settings`}>
               <i className="material-icons">settings</i>
               <p>settings</p>
-            </Link> */}
+            </Link>
+            <li role="separator" class="mdc-list-divider" />
             <Link class={style.link} href={`/teams`}>
               <i className="material-icons">group</i>
               <p>my teams</p>

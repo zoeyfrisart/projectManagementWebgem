@@ -43,13 +43,11 @@ export default class Profile extends Component {
           title={this.props.title}
           toSpecial={this.props.toSpecial}
         />
-        {/* <header class={style.profileHeader} role="banner" /> */}
         <div class={style.profileWrap}>
           <div class={style.profileDesc}>
             <h2 class={style.userName}>{this.state.user.name}</h2>
             <p class={style.subInfoFunctie}>{this.state.user.functie}</p>
-            {/* <span class={style.subInfoEmail}>{this.state.user.email}</span> */}
-            <blockquote class={style.bio}>{this.state.user.bio}</blockquote>
+            <blockquote>{this.state.user.bio}</blockquote>
             <footer class={style.friends}>
               <div>
                 <p class={style.friendHead}>friends</p>

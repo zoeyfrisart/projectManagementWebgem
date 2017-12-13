@@ -126,3 +126,103 @@
   color: #ffffff99;
   font-size: 11px;
 }
+
+@media (max-width: 560px){
+  .profile{
+    background: none;
+    justify-content: flex-start;
+  }
+
+  .profileWrap{
+    background: none;
+    background-color: rgba(29,29,38,0.03);
+    border-radius: 0;
+    box-shadow: none;
+    color: #333333;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .profileDesc{
+    align-items: flex-start;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    order: 1;
+    padding: 0 29px;
+    width: 100%;
+  }
+
+  .profilePicWrap {
+    border-radius: 100%;
+    clip-path: none;
+    display: block;
+    height: 100px;
+    margin: 15px 0;
+    order: 0;
+    width: 100px;
+    flex: 0 0 100px;
+    background: #fefefe;
+  }
+
+  .profilePic{
+    filter: grayscale(0.25);
+  }
+
+  .inputGroup{
+    border-bottom: 1px solid rgba(60.8%, 60.8%, 60.8%, 0.125);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .editProfileInput{
+    border: 0;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.75;
+    order: 2;
+    padding: 0;
+  }
+
+  .editProfileInput::placeholder{
+    color: rgba(183, 183, 183, 0.61);
+  }
+
+  .inputGroup label {
+    bottom: 0;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    left: 0;
+    margin: 0;
+    opacity: 0.3;
+    order: 1;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transition: .15s;
+  }
+
+  .inputGroup textarea {
+    max-height: 100px;
+  }
+
+  .inputGroup input:focus + label,
+  .inputGroup textarea:focus + label{
+    color: #0077C2;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+}

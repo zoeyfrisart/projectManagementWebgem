@@ -30,16 +30,7 @@ export default class StatusComp extends Component {
   }
 
   calculateDayDeadline() {
-    let deadlineAway = moment(this.state.board.deadline, 'DD/MM/YY').fromNow(true);
-    if ( deadlineAway.indexOf('ago') >= 0 && this.props.details.status !== 'Done'){
-      return <span class={style.inPast}>{deadlineAway}</span>;
-    }
-    else if ( deadlineAway.indexOf('ago') >= 0){
-      return <span class={style.inPastDone}>{deadlineAway}</span>;
-    }
-    else if (deadlineAway.indexOf('Invalid date') >= 0) {
-      return false;
-    }
+    let deadlineAway = moment(this.state.board.deadline, 'DD/MM/YY').fromNow();
     return deadlineAway;
   }
 

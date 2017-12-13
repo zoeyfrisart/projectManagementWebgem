@@ -25,7 +25,8 @@ export default class BoardGroup extends Component {
     this.state = {
       items: {},
       displayColorPicker: false,
-      color: this.props.details.color
+      color: this.props.details.color,
+      settings: {}
     };
   }
 
@@ -33,6 +34,10 @@ export default class BoardGroup extends Component {
     this.ref = base.syncState(`/items/${this.props.index}/`, {
       context: this,
       state: 'items'
+    });
+    this.ref2 = base.syncState(`/users/${this.props.uid}/settings`, {
+      context: this,
+      state: 'settings'
     });
   }
 
@@ -99,9 +104,10 @@ export default class BoardGroup extends Component {
 
   render() {
     const details = this.props.details;
+    const settings = this.state.settings;
     return (
       <div class={style.groupWrap}>
-        <MediaQuery query="(min-width: 561px)">
+        <MediaQuery query="(min-width: 560px) and (max-width: 561px)">
           <table cellpadding="2" cellSpacing="2" class={style.group}>
             <thead class={style.tableHead} style={`display: table-header-group;`}>
               <tr>
@@ -169,6 +175,35 @@ export default class BoardGroup extends Component {
               </td>
             </tr>
           </table>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 561px)">
+          <div
+            class={style.groupSec}
+            style={`
+              --userColor: ${settings.color || '#596496'};
+              --userFontSize: ${settings.fontSize || 14}px;
+              --userFontWeight: ${settings.fontWeight || 300};
+              --userOpacity: ${settings.opacity || 0.7};
+            `}
+          >
+            <div class={style.groupHeader}>
+              <h2 class={style.groupH2}>{details.name}</h2>
+              <div class={style.gheadtags}>
+                <h3>Task</h3>
+                <h3>Assigned</h3>
+                <h3>Status</h3>
+                <h3>Priority</h3>
+                <h3>Deadline</h3>
+              </div>
+            </div>
+            <div class={style.groupItems} >
+              {
+                Object
+                  .keys(this.state.items)
+                  .map(key => <Item key={key} index={key} updateItem={this.updateItem} details={this.state.items[key]} teamname={this.props.teamname} color={this.props.details.color} uid={this.props.uid} settings={this.state.settings} members={this.props.members} boardName={this.props.boardName} groupI={this.props.index} removeItem={this.removeItem} />)
+              }
+            </div>
+          </div>
         </MediaQuery>
         <MediaQuery query="(max-width: 560px)">
           <ul class={style.ulGroup}>

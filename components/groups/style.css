@@ -202,3 +202,72 @@ ul{
 .taskWrapLi, .taskWrapUl{
   display: block;
 }
+
+.groupSec{
+  --groupColor: #ee5b60;
+  --userColor: #000000;
+  --userFontSize: 14px;
+  --userFontWeight: 300;
+  --userOpacity: 0.75;
+  background-color: rgba(182,182,182,0.03);
+  color: var(--userColor);
+  display: block;
+  font-size: var(--userFontSize);
+  font-weight: var(--userFontWeight);
+  height: 100%;
+  width: 100%;
+}
+
+.groupHeader{
+  display: block;
+  height: auto;
+  padding: 15px 29px 0;
+  width: 100%;
+}
+
+.groupH2{
+  color: var(--groupColor);
+  flex: 1 0 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  font-weight: var(--userFontWeight);
+  line-height: 20px;
+  margin: 0;
+}
+
+.gheadtags{
+  display: flex;
+}
+
+.gheadtags h3{
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95em;
+  font-weight: 300;
+  opacity: calc(var(--userOpacity) - 0.15);
+}
+
+.gheadtags h3:nth-child(1){
+  flex: 0 0 24%;
+}
+
+.gheadtags h3:nth-child(2){
+  flex: 0 0 18%;
+}
+
+.gheadtags h3:nth-child(3){
+  flex: 0 0 20%;
+}
+
+.gheadtags h3:nth-child(4){
+  flex: 0 0 18%;
+}
+
+.gheadtags h3:nth-child(5){
+  flex: 0 0 20%;
+}
+
+.groupItems{
+  display: block;
+  width: 100%;
+}
