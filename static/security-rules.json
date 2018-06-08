@@ -1,0 +1,29 @@
+// These are your firebase security rules - put them in the "Security & Rules" tab of your database
+{
+  "rules": {
+    // won't let people edit global value's
+    "global" : {
+      ".read": true,
+      ".write": false
+    },
+    "teams" : {
+        // Only members can write to the team
+      ".read" : true,
+      ".write": "auth != null && (root.child('global').child('members').child(auth.uid).exists())"
+    },
+    "items" : {
+      ".read": true,
+      ".write": "auth != null && (root.child('global').child('members').child(auth.uid).exists())"
+    },
+    "groups" : {
+      ".read": true,
+      ".write": "auth != null && (root.child('global').child('members').child(auth.uid).exists())"
+    },
+    "users" : {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && (!data.exists() || $uid === auth.uid)"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "bordderwijze",
+  "version": "1.0.1",
+  "description": "Project management system",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "eslint src && preact test",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "deploy": "ns ./build --cmd 'list ./content -s'"
+  },
+  "keywords": [],
+  "author": "Yannick Frisart",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "concurrently": "^3.5.0",
+    "eslint": "^4.8.0",
+    "eslint-config-synacor": "^2.0.2",
+    "if-env": "^1.0.0",
+    "preact-cli": "^1.4.1",
+    "preact-material-components": "^1.2.1",
+    "stylus": "^0.54.5",
+    "why-did-you-update": "0.0.8"
+  },
+  "dependencies": {
+    "linkstate": "^1.1.0",
+    "material-components-web": "^0.22.0",
+    "moment": "^2.19.1",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "preact-notify-change": "0.0.1",
+    "preact-router": "^2.5.7",
+    "re-base": "^3.0.4",
+    "react-autosuggest": "^9.3.2",
+    "react-color": "^2.13.8",
+    "react-responsive": "^4.0.3",
+    "request": "^2.83.0",
+    "uuid": "^3.1.0"
+  }
+}

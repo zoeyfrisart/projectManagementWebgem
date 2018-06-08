@@ -1,0 +1,164 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=3600, no-cache"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Max-Age",
+            "value": "600"
+          }
+        ]
+      },
+      {
+        "source": "/sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "private, no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.chunk.*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-home.chunk.da7ba.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/settings",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-settings.chunk.a593f.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/team",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-team.chunk.617ff.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/Teams",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-Teams.chunk.e3e65.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/profile",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-profile.chunk.23696.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/edit",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-edit.chunk.65513.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/login",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-login.chunk.381a8.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/board",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-board.chunk.e67fb.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/createGroup",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-createGroup.chunk.5175b.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/itemOverview",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-itemOverview.chunk.4f3d8.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/editItem",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-editItem.chunk.657be.js>; rel=preload; as=script"
+          }
+        ]
+      },
+      {
+        "source": "/createTask",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bundle.67f02.js>; rel=preload; as=script, </style.760ac.css>; rel=preload; as=style, </route-createTask.chunk.5619d.js>; rel=preload; as=script"
+          }
+        ]
+      }
+    ]
+  }
+}
