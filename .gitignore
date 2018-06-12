@@ -10,6 +10,7 @@ assets/icons/android-chrome-512x512.png
 assets/icons/android-chrome-192x192.png
 assets/icons/mstile-150x150.png
 assets/img/user-plus.svg.png
+node_modules
 database.rules.json
 firebase.json
 raven.js
